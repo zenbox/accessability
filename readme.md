@@ -6,7 +6,7 @@ Unterlagen und Codes zum Workshop Barrierefreie Webseiten mit HTML5.
 - in "Docs" finden Sie die Folien aus dem Workshop
 - in "Snippets" sind die Codebeispiele, die wir während des Workshops besprochen haben.
 
-Bei Rückfragen einfach melden: michael.reichart@gfu.net
+Rückfragen an michael.reichart@gfu.net.
 
 ## Links
 
