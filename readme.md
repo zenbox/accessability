@@ -20,3 +20,4 @@ Rückfragen an michael.reichart@gfu.net.
 - [Demonstration für Farbenfehlsichtigkeiten](https://www.toptal.com/designers/colorfilter)
 - [Artikel: Chancengleichheit - Behinderte in der digitalen Welt](https://www.heise.de/ct/artikel/Chancengleichheit-288680.html)
 - [Artikel: WCAG 2.1 - 17 neue Kriterien](https://www.hellbusch.de/neuer-webstandard-fuer-digitale-barrierefreiheit-die-wcag-2-1-ergaenzt-die-wcag-2-0-um-17-neue-erfolgskriterien/)
+- [Kontrastrechner](https://www.leserlich.info/werkzeuge/kontrastrechner/)
