@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blinden- und Sehbehindertenverband Nordrhein e.V.</title>
+
+    <meta property="og:site_name" content="bsv-nordrhein.de" />
+    <meta property="og:url" content="https://www.bsv-nordrhein.de/index.php" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blinden- und Sehbehindertenverband Nordrhein e.V." />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://www.bsv-nordrhein.de/images/banner/banner-01-startseite.jpg" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@BSVN">
+    <meta name="twitter:title" content="Blinden- und Sehbehindertenverband Nordrhein e.V." />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://www.bsv-nordrhein.de/images/banner/banner-01-startseite.jpg">
+    <meta name="twitter:url" content="https://www.bsv-nordrhein.de/index.php" />
+
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
+
+    <!--<link rel="stylesheet" href="https://cdn.e-nitio.net/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.e-nitio.net/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cms/css/master.css" id="colors">-->
+    <!--[if lt IE 9]><script src="https://cdn.e-nitio.net/html5shiv/html5shiv.min.js"></script><script src="https://cdn.e-nitio.net/respond/respond.min.js"></script><![endif]-->
+</head>
+
+<body id="top" tabindex="-1" class="newsletter-footer">
+
+    <div class="sprungmarken bg-gray sr-only">
+        <a class="sr-only sr-only-focusable" href="#nav-main" title="Sprungmarke: Direkt zur Hauptnavigation"
+            aria-label="Sprungmarke: Direkt zur Hauptnavigation">Zur Hauptnavigation</a>
+        <a class="sr-only sr-only-focusable" href="#maincontent" title="Sprungmarke: Direkt zum Inhalt"
+            aria-label="Sprungmarke: Direkt zum Inhalt">Zum Inhalt</a>
+        <a class="sr-only sr-only-focusable" href="#searchcontainer" title="Sprungmarke: Direkt zur Suche"
+            aria-label="Sprungmarke: Direkt zur Suche">Zur Suche</a>
+        <a class="sr-only sr-only-focusable" href="#top" title="Sprungmarke: Direkt zum Seitenanfang"
+            aria-label="Sprungmarke: Direkt zum Seitenanfang">Zum Seitenanfang</a>
+        <a class="sr-only sr-only-focusable" href="#footer" title="Sprungmarke: Direkt zum Seitenende"
+            aria-label="Sprungmarke: Direkt zum Seitenende">Zum Seitenende</a>
+    </div>
+
+    <header class="bg-contrast affix-top">
+        <div class="top-bar bg-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <nav class="nav-settings button-group text-right">
+
+                            <div class="nav-settings--entry dropdown">
+                                <a href="#" class="nav-settings--trigger btn btn-primary icon-left" id="get-color"
+                                    data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                                    title="Kontrasteinstellung der Seite anpassen"
+                                    aria-label="Kontrasteinstellung der Seite anpassen"><i class="fa fa-adjust"
+                                        aria-hidden="true"></i><span class="hidden-xs">Kontrast ändern</span></a>
+                                <ul class="dropdown-menu" id="set-color">
+                                    <li id="black-white">
+                                        <a href="#" data-color-file="/cms/css/master_black-white.css"
+                                            title="Schwarz-Weiß Kontrast einstellen"
+                                            aria-label="Schwarz-Weiß Kontrast einstellen">
+                                            <img src="/_thumbnails_/71_7_contrast_black-white.png?m=1550226326"
+                                                alt="Schwarz-Weiß Kontrast" title="Kontrast Schwarz Weiß" height="17"
+                                                width="17" class="no-gray" /> schwarz/ weiß</a>
+                                    </li>
+                                    <li id="black-yellow">
+                                        <a href="#" data-color-file="/cms/css/master_black-yellow.css"
+                                            title="Schwarz-Gelb Kontrast einstellen"
+                                            aria-label="Schwarz-Gelb Kontrast einstellen">
+                                            <img src="/_thumbnails_/72_7_contrast_black-yellow.png?m=1550226326"
+                                                alt="Schwarz-Gelb Kontrast" title="Kontrast Schwarz Gelb" height="17"
+                                                width="17" class="no-gray" /> schwarz/ gelb</a>
+                                    </li>
+                                    <li id="blue-yellow">
+                                        <a href="#" data-color-file="/cms/css/master_blue-yellow.css"
+                                            title="Blau-Gelb Kontrast einstellen"
+                                            aria-label="Blau-Gelb Kontrast einstellen">
+                                            <img src="/_thumbnails_/73_7_contrast_blue-yellow.png?m=1550226327"
+                                                alt="Blau-Gelb Kontrast" title="Kontrast Blau Gelb" height="17"
+                                                width="17" class="no-gray" /> blau/ gelb</a>
+                                    </li>
+                                    <li id="default" class="">
+                                        <a href="#" data-color-file="/cms/css/master.css"
+                                            title="Standard Kontrast einstellen"
+                                            aria-label="Standard Kontrast einstellen">
+                                            <img src="/_thumbnails_/74_7_contrast_default.png?m=1550226327"
+                                                alt="Standard Kontrast" title="Standardkontrast" height="17" width="17"
+                                                class="no-gray" /> zurücksetzen</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="nav-settings--entry dropdown">
+                                <a href="#" class="nav-settings--trigger btn btn-primary icon-left" id="get-size"
+                                    data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                                    title="Schriftgröße der Seite anpassen"
+                                    aria-label="Schriftgröße der Seite anpassen"><i class="fa fa-font"
+                                        aria-hidden="true"></i><span class="hidden-xs">Schriftgröße ändern</span></a>
+                                <ul class="dropdown-menu" id="set-size">
+                                    <li id="text-smaller">
+                                        <a href="#" title="Darstellung verkleinern"
+                                            aria-label="Darstellung verkleinern">
+                                            <img src="/_thumbnails_/77_7_font-smaller.png?m=1550226327" alt="kleiner"
+                                                title="Schriftgröße verkleinern" height="17" width="17"
+                                                class="no-gray" /> kleiner</a>
+                                    </li>
+                                    <li id="text-default" class="invisible">
+                                        <a href="#" title="Darstellung zurücksetzen"
+                                            aria-label="Darstellung zurücksetzen">
+                                            <img src="/_thumbnails_/75_7_font-default.png?m=1550226327"
+                                                alt="zurücksetzen" title="Standard Schriftgröße" height="17" width="17"
+                                                class="no-gray" /> zurücksetzen</a>
+                                    </li>
+                                    <li id="text-greater">
+                                        <a href="#" title="Darstellung vergrößern" aria-label="Darstellung vergrößern">
+                                            <img src="/_thumbnails_/76_7_font-greater.png?m=1550226327" alt="größer"
+                                                title="Schriftgröße vergrößern" height="17" width="17"
+                                                class="no-gray" /> größer</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-6 col-md-4 col-lg-3">
+                    <div class="logo--container">
+
+                        <a href="/" class="logo--link" title="Link zur Startseite" aria-label="Link zur Startseite">
+                            <img src="/cms/img/logo-bsvn.svg?m=1550226329"
+                                alt="Logo des Blinden- und Sehbehindertenverband Nordrhein e.V. (BSVN)"
+                                title="Blinden- und Sehbehindertenverband Nordrhein e.V. (BSVN)" /> </a>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-md-offset-2 col-lg-5 col-lg-offset-4 text-xs-right text-sm-right search-bar"
+                    id="searchcontainer" tabindex="-1">
+
+                    <div class="global-search text-xs-left text-sm-left" id="search-form">
+
+                        <a href="#" class="btn btn-lg btn-square btn-outline btn-primary hidden-md hidden-lg"
+                            id="close-mobile-search" title="Suche schließen" aria-label="Suche schließen"><i
+                                class="fa fa-times" aria-hidden="true"></i></a>
+
+                        <form method="post" name="sitesearch" action="/suche.php">
+                            <p class="hidden-md hidden-lg h2">Webseite durchsuchen:</p>
+                            <div class="row form-group">
+                                <div class="col-xs-12 col-sm-8">
+                                    <label for="search" class="sr-only">Suchbegriff</label>
+                                    <input type="text" class="form-control" name="we_lv_search_searchInput" id="search"
+                                        placeholder="Suchbegriff eingeben …" value='' />
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <button type="submit" name="submitGlobalSearch" value="1"
+                                        class="btn btn-block btn-outline btn-primary icon-left"><i class="fa fa-search"
+                                            aria-hidden="true"></i>Suchen</button>
+                                </div>
+                            </div>
+                            <input type="hidden" name="securityToken" value="007479ed93b7598a1c2c0a31b912bcc2" />
+                        </form>
+                    </div>
+
+
+                    <a href="#" class="btn btn-lg btn-square btn-outline btn-primary hidden-md hidden-lg"
+                        id="open-mobile-search" title="Suche öffnen" aria-label="Suche öffnen"><i class="fa fa-search"
+                            aria-hidden="true"></i></a>
+
+
+                    <a href="#" class="btn btn-lg btn-square btn-primary hidden-md hidden-lg" id="open-mobile-nav"
+                        title="Navigation öffnen" aria-label="Navigation öffnen">
+                        <span class="nav-icon">
+                            <span class="stroke stroke-top"></span>
+                            <span class="stroke stroke-center"></span>
+                            <span class="stroke stroke-bottom"></span>
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container" id="nav-main" tabindex="-1">
+            <div class="row">
+                <div class="col-xs-12">
+                    <nav class="nav-main">
+
+                        <a href="#" class="btn btn-lg btn-square btn-outline btn-primary hidden-md hidden-lg"
+                            id="close-mobile-nav" title="Navigation schließen" aria-label="Navigation schließen"><i
+                                class="fa fa-times" aria-hidden="true"></i></a>
+
+                        <p class="hidden-md hidden-lg h2"><br />Hauptnavigation:</p>
+
+                        <ul class="level-1" role="menu">
+                            <li class="active" aria-current="page" role="menuitem"><a href="/"
+                                    title="Zur Startseite des BSVN" aria-label="Zur Startseite des BSVN">Startseite</a>
+                            </li>
+                            <li class="has--sub" role="menuitem">
+                                <a href="/beratung-unterstuetzung/"
+                                    title="Zur Unterseite &quot;Beratung und Unterst&uuml;tzung&quot;"
+                                    aria-label="Zur Unterseite &quot;Beratung und Unterst&uuml;tzung&quot;">Beratung
+                                    &amp;
+                                    Unterst&uuml;tzung</a>
+                                <ul class="level-2">
+                                    <li role="menuitem"><a
+                                            href="/beratung-unterstuetzung/rehaschulung-lebenspraktische-fertigkeiten.php"
+                                            title="Zur Unterseite &quot;Rehaschulung der lebenspraktischen Fertigkeiten&quot;"
+                                            aria-label="Zur Unterseite &quot;Rehaschulung der lebenspraktischen Fertigkeiten&quot;">Rehaschulung
+                                            der lebenspraktischen Fertigkeiten</a></li>
+                                    <li role="menuitem"><a
+                                            href="/beratung-unterstuetzung/rehaschulung-orientierung-mobilitaet.php"
+                                            title="Zur Unterseite &quot;Rehaschulung in Orientierung und Mobilität&quot;"
+                                            aria-label="Zur Unterseite &quot;Rehaschulung in Orientierung und Mobilität&quot;">Rehaschulung
+                                            in Orientierung und Mobilität</a></li>
+                                    <li role="menuitem"><a
+                                            href="/beratung-unterstuetzung/integrationsfachdienst-sehen.php"
+                                            title="Zur Unterseite &quot;Integrationsfachdienst Sehen&quot;"
+                                            aria-label="Zur Unterseite &quot;Integrationsfachdienst Sehen&quot;">Integrationsfachdienst
+                                            Sehen</a></li>
+                                    <li role="menuitem"><a
+                                            href="/beratung-unterstuetzung/ergaenzende-unabhaengige-teilhabeberatung.php"
+                                            title="Zur Unterseite &quot;Ergänzende unabhängige Teilhabeberatung&quot;"
+                                            aria-label="Zur Unterseite &quot;Ergänzende unabhängige Teilhabeberatung&quot;">Ergänzende
+                                            unabhängige Teilhabeberatung</a></li>
+                                    <li role="menuitem"><a href="/beratung-unterstuetzung/sehhilfenberatung.php"
+                                            title="Zur Unterseite &quot;Sehhilfenberatung&quot;"
+                                            aria-label="Zur Unterseite &quot;Sehhilfenberatung&quot;">Sehhilfenberatung</a>
+                                    </li>
+                                    <li role="menuitem"><a href="/beratung-unterstuetzung/fachgruppen-in-nrw.php"
+                                            title="Zur Unterseite &quot;Fachgruppen in NRW &quot;"
+                                            aria-label="Zur Unterseite &quot;Fachgruppen in NRW &quot;">Fachgruppen in
+                                            NRW </a></li>
+                                    <li role="menuitem"><a
+                                            href="/beratung-unterstuetzung/beauftragte-im-verbandgebiet.php"
+                                            title="Zur Unterseite &quot;Beauftragte im Verbandgebiet&quot;"
+                                            aria-label="Zur Unterseite &quot;Beauftragte im Verbandgebiet&quot;">Beauftragte
+                                            im Verbandgebiet</a></li>
+                                    <li role="menuitem"><a href="/beratung-unterstuetzung/kontakt-zum-ortsverein.php"
+                                            title="Zur Unterseite &quot;Kontakt zu und Hilfe durch den Ortsverein&quot;"
+                                            aria-label="Zur Unterseite &quot;Kontakt zu und Hilfe durch den Ortsverein&quot;">Kontakt
+                                            zu und Hilfe durch den Ortsverein</a></li>
+                                    <li role="menuitem"><a
+                                            href="/beratung-unterstuetzung/kontakt-zur-landesgeschaeftsstelle.php"
+                                            title="Zur Unterseite &quot;Kontakt zur Landesgeschäftsstelle&quot;"
+                                            aria-label="Zur Unterseite &quot;Kontakt zur Landesgeschäftsstelle&quot;">Kontakt
+                                            zur Landesgeschäftsstelle</a></li>
+                                    <li role="menuitem"><a href="/beratung-unterstuetzung/blickpunkt-auge.php"
+                                            title="Zur Unterseite &quot;Blickpunkt Auge&quot;"
+                                            aria-label="Zur Unterseite &quot;Blickpunkt Auge&quot;">Blickpunkt Auge</a>
+                                    </li>
+                                    <li role="menuitem"><a
+                                            href="/beratung-unterstuetzung/wohnheim-meerbusch-struemp.php"
+                                            title="Zur Unterseite &quot;Wohnheim Meerbusch-Strümp&quot;"
+                                            aria-label="Zur Unterseite &quot;Wohnheim Meerbusch-Strümp&quot;">Wohnheim
+                                            Meerbusch-Strümp</a></li>
+                                    <li role="menuitem"><a href="/beratung-unterstuetzung/Datenschutzinfo-Klienten.php"
+                                            title="Zur Unterseite &quot;Datenschutzinformation für Klienten&quot;"
+                                            aria-label="Zur Unterseite &quot;Datenschutzinformation für Klienten&quot;">Datenschutzinformation
+                                            für Klienten</a></li>
+                                </ul>
+                            </li>
+                            <li class="has--sub" role="menuitem">
+                                <a href="/rund-um-das-auge/" title="Zur Unterseite &quot;Rund ums Auge&quot;"
+                                    aria-label="Zur Unterseite &quot;Rund ums Auge&quot;">Rund ums Auge</a>
+                                <ul class="level-2">
+                                    <li role="menuitem"><a href="/rund-um-das-auge/leben-mit-behinderung.php"
+                                            title="Zur Unterseite &quot;Leben mit Behinderung&quot;"
+                                            aria-label="Zur Unterseite &quot;Leben mit Behinderung&quot;">Leben mit
+                                            Behinderung</a></li>
+                                    <li role="menuitem"><a href="/rund-um-das-auge/a-z/"
+                                            title="Zur Unterseite &quot;Von A bis Z&quot;"
+                                            aria-label="Zur Unterseite &quot;Von A bis Z&quot;">Von A bis Z</a></li>
+                                    <li role="menuitem"><a
+                                            href="/rund-um-das-auge/statistik-des-landschaftsverbandes.php"
+                                            title="Zur Unterseite &quot;Statistik des Landschaftsverbandes Rheinland&quot;"
+                                            aria-label="Zur Unterseite &quot;Statistik des Landschaftsverbandes Rheinland&quot;">Statistik
+                                            des Landschaftsverbandes Rheinland</a></li>
+                                </ul>
+                            </li>
+                            <li class="has--sub" role="menuitem">
+                                <a href="/service/" title="Zur Unterseite &quot;Service&quot;"
+                                    aria-label="Zur Unterseite &quot;Service&quot;">Service</a>
+                                <ul class="level-2">
+                                    <li role="menuitem"><a href="/service/publikationen.php"
+                                            title="Zur Unterseite &quot;Publikationen&quot;"
+                                            aria-label="Zur Unterseite &quot;Publikationen&quot;">Publikationen</a></li>
+                                    <li role="menuitem"><a href="/service/hilfsmittelversand.php"
+                                            title="Zur Unterseite &quot;Hilfsmittelversand&quot;"
+                                            aria-label="Zur Unterseite &quot;Hilfsmittelversand&quot;">Hilfsmittelversand</a>
+                                    </li>
+                                    <li role="menuitem"><a href="/service/nordrheinreport.php"
+                                            title="Zur Unterseite &quot;Nordrheinreport&quot;"
+                                            aria-label="Zur Unterseite &quot;Nordrheinreport&quot;">Nordrheinreport</a>
+                                    </li>
+                                    <li role="menuitem"><a href="/service/weiterfuehrende-links.php"
+                                            title="Zur Unterseite &quot;Weiterführende Links&quot;"
+                                            aria-label="Zur Unterseite &quot;Weiterführende Links&quot;">Weiterführende
+                                            Links</a></li>
+                                </ul>
+                            </li>
+                            <li class="has--sub" role="menuitem">
+                                <a href="/ueber-uns/" title="Zur Unterseite &quot;Über uns&quot;"
+                                    aria-label="Zur Unterseite &quot;Über uns&quot;">Über uns</a>
+                                <ul class="level-2">
+                                    <li role="menuitem"><a href="/ueber-uns/satzung.php"
+                                            title="Zur Unterseite &quot;Satzung&quot;"
+                                            aria-label="Zur Unterseite &quot;Satzung&quot;">Satzung</a></li>
+                                    <li role="menuitem"><a href="/ueber-uns/unser-vorstand.php"
+                                            title="Zur Unterseite &quot;Unser Vorstand&quot;"
+                                            aria-label="Zur Unterseite &quot;Unser Vorstand&quot;">Unser Vorstand</a>
+                                    </li>
+                                    <li role="menuitem"><a href="/ueber-uns/unsere-geschaeftsstelle.php"
+                                            title="Zur Unterseite &quot;Unsere Geschäftsstelle&quot;"
+                                            aria-label="Zur Unterseite &quot;Unsere Geschäftsstelle&quot;">Unsere
+                                            Geschäftsstelle</a></li>
+                                    <li role="menuitem"><a href="/ueber-uns/unsere-mitarbeiter.php"
+                                            title="Zur Unterseite &quot;Unsere Mitarbeiterinnen und Mitarbeiter&quot;"
+                                            aria-label="Zur Unterseite &quot;Unsere Mitarbeiterinnen und Mitarbeiter&quot;">Unsere
+                                            Mitarbeiterinnen und Mitarbeiter</a></li>
+                                    <li role="menuitem"><a href="/ueber-uns/aufgaben-ziele.php"
+                                            title="Zur Unterseite &quot;Aufgaben und Ziele&quot;"
+                                            aria-label="Zur Unterseite &quot;Aufgaben und Ziele&quot;">Aufgaben und
+                                            Ziele</a></li>
+                                    <li role="menuitem"><a
+                                            href="/ueber-uns/interessenvertretung-gremien-facharbeitskreisen.php"
+                                            title="Zur Unterseite &quot;Interessenvertretung in politischen Gremien und Facharbeitskreisen&quot;"
+                                            aria-label="Zur Unterseite &quot;Interessenvertretung in politischen Gremien und Facharbeitskreisen&quot;">Interessenvertretung
+                                            in politischen Gremien und Facharbeitskreisen</a></li>
+                                    <li role="menuitem"><a href="/ueber-uns/arbeit-in-gremien.php"
+                                            title="Zur Unterseite &quot;Arbeit in Gremien&quot;"
+                                            aria-label="Zur Unterseite &quot;Arbeit in Gremien&quot;">Arbeit in
+                                            Gremien</a></li>
+                                    <li role="menuitem"><a href="/ueber-uns/geschaeftsberichte.php"
+                                            title="Zur Unterseite &quot;Geschäftsberichte&quot;"
+                                            aria-label="Zur Unterseite &quot;Geschäftsberichte&quot;">Geschäftsberichte</a>
+                                    </li>
+                                    <li role="menuitem"><a href="/ueber-uns/zusammenarbeit-selbsthilfeverbaenden.php"
+                                            title="Zur Unterseite &quot;Zusammenarbeit mit anderen Selbsthilfeverbänden&quot;"
+                                            aria-label="Zur Unterseite &quot;Zusammenarbeit mit anderen Selbsthilfeverbänden&quot;">Zusammenarbeit
+                                            mit anderen Selbsthilfeverbänden</a></li>
+                                    <li role="menuitem"><a href="/ueber-uns/transparenz.php"
+                                            title="Zur Unterseite &quot;Transparenz&quot;"
+                                            aria-label="Zur Unterseite &quot;Transparenz&quot;">Transparenz</a></li>
+                                    <li role="menuitem"><a href="/ueber-uns/historie.php"
+                                            title="Zur Unterseite &quot;Historie&quot;"
+                                            aria-label="Zur Unterseite &quot;Historie&quot;">Historie</a></li>
+                                    <li role="menuitem"><a href="/ueber-uns/ortsvereine.php"
+                                            title="Zur Unterseite &quot;Ortsvereine&quot;"
+                                            aria-label="Zur Unterseite &quot;Ortsvereine&quot;">Ortsvereine</a></li>
+                                    <li role="menuitem"><a
+                                            href="/ueber-uns/mitgliedschaft-blinden-sehbehindertenverein.php"
+                                            title="Zur Unterseite &quot;Mitgliedschaft im Blinden- und Sehbehindertenverein&quot;"
+                                            aria-label="Zur Unterseite &quot;Mitgliedschaft im Blinden- und Sehbehindertenverein&quot;">Mitgliedschaft
+                                            im Blinden- und Sehbehindertenverein</a></li>
+                                </ul>
+                            </li>
+                            <li class="has--sub" role="menuitem">
+                                <a href="/aktuelles/" title="Zur Unterseite &quot;Aktuelles&quot;"
+                                    aria-label="Zur Unterseite &quot;Aktuelles&quot;">Aktuelles</a>
+                                <ul class="level-2">
+                                    <li role="menuitem"><a href="/aktuelles/veranstaltungen-termine/"
+                                            title="Zur Unterseite &quot;Veranstaltungen und Termine&quot;"
+                                            aria-label="Zur Unterseite &quot;Veranstaltungen und Termine&quot;">Veranstaltungen
+                                            und Termine</a></li>
+                                    <li role="menuitem"><a href="/aktuelles/nordrheinreport.php"
+                                            title="Zur Unterseite &quot;Nordrheinreport&quot;"
+                                            aria-label="Zur Unterseite &quot;Nordrheinreport&quot;">Nordrheinreport</a>
+                                    </li>
+                                    <li role="menuitem"><a href="/aktuelles/hoerfilme-mit-audiodeskription.php"
+                                            title="Zur Unterseite &quot;Hörfilme mit Audiodiskreption&quot;"
+                                            aria-label="Zur Unterseite &quot;Hörfilme mit Audiodiskreption&quot;">Hörfilme
+                                            mit Audiodiskreption</a></li>
+                                </ul>
+                            </li>
+                            <li class="has--sub" role="menuitem">
+                                <a href="/mitmachen-unterstuetzen/"
+                                    title="Zur Unterseite &quot;Mitmachen und Unterstützen&quot;"
+                                    aria-label="Zur Unterseite &quot;Mitmachen und Unterstützen&quot;">Mitmachen &amp;
+                                    Unterstützen</a>
+                                <ul class="level-2">
+                                    <li role="menuitem"><a
+                                            href="/mitmachen-unterstuetzen/foerdermitgliedschaft-spende.php"
+                                            title="Zur Unterseite &quot;Fördermitgliedschaft oder Spende&quot;"
+                                            aria-label="Zur Unterseite &quot;Fördermitgliedschaft oder Spende&quot;">Fördermitgliedschaft
+                                            oder Spende</a></li>
+                                    <li role="menuitem"><a href="/mitmachen-unterstuetzen/persoenliches-engagement.php"
+                                            title="Zur Unterseite &quot;Persönliches Engagement&quot;"
+                                            aria-label="Zur Unterseite &quot;Persönliches Engagement&quot;">Persönliches
+                                            Engagement</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main id="maincontent" tabindex="-1">
+
+        <section class="top-section top-section--big container-fluid">
+            <div class="top-section--image-container">
+                <img src="/_thumbnails_/320_6_banner-01-startseite.jpg?m=1550226364" class="top-section--image"
+                    alt="Frau läuft über einen Gehweg mit Blindenleitsystem. Sie orientiert sich mit einem Langstock."
+                    title="Frau orientiert sich mit einem Langstock und einem Blindenleitsystem im Gehweg." /> <span
+                    class="top-section--image-glow hidden-md hidden-lg"></span>
+            </div>
+
+            <div class="top-section--background-outer">
+                <span class="top-section--background bg-grad-primary"></span>
+            </div>
+
+            <div class="top-section--content container sp-default">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-md-6 col-lg-5">
+
+                        <h1>
+                            <span class="headline-inner">Hilfe & Beratung</span>
+                            <span class="h2"><span class="headline-inner">für blinde und sehbehinderte Menschen und ihre
+                                    Angehörigen im Raum Nordrhein.</span></span> </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-section--more container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="#main" class="no-style top-section--more--icon" tabindex="-1"
+                            title="Erfahren Sie mehr über den BSVN" aria-hidden="true"><img
+                                src="/cms/img/arrow-down-big.png?m=1550226325" alt="Arrow down"
+                                title="Pfeil nach unten - Springt ans Ende der Seite" /></a>
+                        <a href="#main" class="top-section--more--link text-contrast"
+                            title="Erfahren Sie mehr über den BSVN" aria-label="Erfahren Sie mehr über den BSVN">mehr
+                            erfahren …</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="main" class="section--main container-fluid ">
+            <div class="bg-contrast sp-big">
+                <div class="container">
+                    <article class="row">
+                        <div class="flex-row flex-align-center">
+                            <div class="col-xs-10 col-sm-6 col-md-5 content-img-left">
+                                <img src="/images/startseite-einleitungsbild.jpg?m=1550226346" class="box-shadow"
+                                    alt="Frau unterstützt blindes Mädchen beim Gehen"
+                                    title="Frau unterstützt draußen blindes Mädchen" /> </div>
+                            <div class="col-xs-12 col-md-6 col-md-offset-1">
+                                <h2>Der <strong>Blinden und Sehbehindertenverband Nordrhein</strong> (BSVN) hat die
+                                    Aufgabe, sich um Ihre Fragen und Sorgen zu kümmern!</h2>
+                                <div class="content fs-highlight">
+                                    <p>Wir setzen uns für die Interessen und Belange aller Sehbehinderten, hochgradig
+                                        Sehbehinderten und Blinden im Rheinland ein. Das wichtigste Ziel ist die
+                                        Integration blinder und sehbehinderter Menschen in den Beruf sowie die
+                                        Eingliederung in das gesellschaftliche Leben.</p>
+                                </div>
+                                <a href="/ueber-uns/" class="btn btn-primary btn-more icon-right"
+                                    title="Link führt zu weiteren Informationen über den BSVN" lang=""
+                                    aria-label="Link führt zu weiteren Informationen über den BSVN" lang="" hreflang=""
+                                    target="">Mehr erfahren <i class="fa fa-long-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section id="first-help" class="section--first-help container-fluid">
+            <div class="bg-gray sp-small has--sh-big">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <div class="section--headline bp-big bg-contrast box-shadow-light">
+                                <h2>Neue <strong>Herausforderungen meistern</strong> – Das Leben mit einer
+                                    Sehbehinderung </h2>
+                                <p class="fs-highlight">Am Anfang einer beginnenden, schwerwiegenden Erkrankung der
+                                    Augen beschäftigen sich Betroffene und Angehörige intensiv mit der neuen, großen
+                                    Herausforderung.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-5 col-md-offset-1 first-help--slider">
+                            <div class="row first-help--item active">
+                                <div class="col-xs-10 ">
+                                    <blockquote>Wie kann es beruflich für mich weitergehen?</blockquote>
+                                </div>
+                                <div class="col-xs-10 col-xs-offset-2">
+                                    <blockquote>Wie kann ich mich im Straßenverkehr wieder orientieren?</blockquote>
+                                </div>
+                            </div>
+                            <div class="row first-help--item">
+                                <div class="col-xs-10 ">
+                                    <blockquote>Werde ich jemals wieder ein Buch lesen können?</blockquote>
+                                </div>
+                                <div class="col-xs-10 col-xs-offset-2">
+                                    <blockquote>Welche Möglichkeiten gibt es für mich, mir wieder Notizen zu machen?
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="row first-help--item">
+                                <div class="col-xs-10 ">
+                                    <blockquote>Wie kann ich mit anderen Betroffenen in Kontakt kommen?</blockquote>
+                                </div>
+                                <div class="col-xs-10 col-xs-offset-2">
+                                    <blockquote>Welche Hilfe bietet welche Behörde?</blockquote>
+                                </div>
+                            </div>
+                            <div class="row first-help--item">
+                                <div class="col-xs-10 ">
+                                    <blockquote>Wie kann ich meinen Haushalt selbständig führen?</blockquote>
+                                </div>
+                                <div class="col-xs-10 col-xs-offset-2">
+                                    <blockquote>Welche Freizeitmöglichkeiten stehen mir zur Verfügung?</blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 btn-more--ooc">
+                            <a href="/beratung-unterstuetzung/" class="btn btn-primary btn-more icon-right"
+                                title="Link führt zu Informationen für frisch erkrankte Personen oder Angehörige von frisch Erkrankten."
+                                aria-label="Link führt zu Informationen für frisch erkrankte Personen oder Angehörige von frisch Erkrankten."
+                                lang="en" hreflang="de" target="">Mehr erfahren <i class="fa fa-long-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="information-centres" class="section--information-centres container-fluid ">
+            <div class="bg-contrast sp-big has--sh-big">
+                <div class="container">
+                    <div class="row box-group-small">
+                        <div class="bg-image--outer col-xs-12 col-md-11">
+                            <div class="bg-image">
+                                <div class="bg-image--image"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-10 col-md-7 col-sm-offset-1">
+                            <div class="section--headline bp-big bg-contrast box-shadow-light">
+                                <h2><strong>Beratungs- und Anlaufstellen</strong> für Betroffene und deren Angehörige
+                                </h2>
+                                <p class="fs-highlight">Der BSVN vertritt die Interessen lokaler Blinden- und
+                                    Sehbehindertenvereine auf Landesebene. In den Städten sind die Ortsvereine die
+                                    wichtigsten Ansprechpartner für Betroffene und deren Angehörige.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 ">
+                            <div class="box-item first-item bp-default bg-contrast box-shadow-light">
+                                <div class="row">
+                                    <div class="col-xs-7">
+                                        <h3 class="h2">Ihr <br />Ortsverein</h3>
+                                    </div>
+                                    <div class="col-xs-5 information-centre--icon text-right"><img
+                                            src="/cms/img/icon-beratung-vor-ort.png?m=1550226328"
+                                            alt="Icon Beratung vor Ort"
+                                            title="Icon zur Visualisierung der Beratungsstellen vor Ort" /></div>
+                                </div>
+
+                                <a href="/beratung-unterstuetzung/kontakt-zum-ortsverein.php"
+                                    title="Link führt zu einer Übersichtseite aller Ortsvereine mit Suchfunktion um die richtigen Ansprechpartner in der Nähe zu finden."
+                                    aria-label="Link führt zu einer Übersichtseite aller Ortsvereine mit Suchfunktion um die richtigen Ansprechpartner in der Nähe zu finden."
+                                    lang="" hreflang="" target="">Ortsverein in Ihrer Nähe finden <i
+                                        class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-2 col-lg-4 col-lg-offset-4 ">
+                            <div class="box-item bp-default bg-contrast box-shadow-light">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h3 class="h2">Kontakt zur Landes&shy;geschäfts&shy;stelle</h3>
+                                    </div>
+                                </div>
+
+                                <a href="/beratung-unterstuetzung/kontakt-zur-landesgeschaeftsstelle.php"
+                                    title="Link führt zu den Kontaktinformationen der Landesgeschäftsstelle des BSVN."
+                                    aria-label="Link führt zu den Kontaktinformationen der Landesgeschäftsstelle des BSVN."
+                                    lang="" hreflang="" target="">Besuchen Sie uns in Meerbusch <i
+                                        class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-0 col-lg-4">
+                            <div class="box-item bp-default bg-contrast box-shadow-light">
+                                <div class="row">
+                                    <div class="col-xs-8">
+                                        <h3 class="h2">Beratung <br />für Sehhilfen</h3>
+                                    </div>
+                                    <div class="col-xs-4 information-centre--icon text-right"><img
+                                            src="/cms/img/icon-beratung-sehhilfen.png?m=1550226328"
+                                            alt="Icon Beratung vor Ort"
+                                            title="Icon zur Visualisierung der Beratungsstellen vor Ort" /></div>
+                                </div>
+
+                                <a href="/beratung-unterstuetzung/sehhilfenberatung.php"
+                                    title="Link führt zu den Kontaktinformationen unserer Beratungsstellen, welche auch Beratung für Sehhilfen anbieten."
+                                    aria-label="Link führt zu den Kontaktinformationen unserer Beratungsstellen, welche auch Beratung für Sehhilfen anbieten."
+                                    lang="" hreflang="" target="">Kostenlosen Termin vereinbaren <i
+                                        class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news-events" class="section--news-events container-fluid ">
+            <div class="bg-gray sp-small has--sh-big">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-7 section-news">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-9">
+                                    <div class="section--headline bp-big bg-contrast box-shadow-light">
+                                        <h2>Aktuelle <strong>Ankündigungen</strong> und <strong>News</strong> des BSVN
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row box-group-default">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="box-item news-item">
+                                        <span class="text-primary news-item--date">16. Mai 2019</span>
+                                        <h3 class="news-item--title">Diabetes führt oft zu Augenerkrankungen</h3>
+                                        <p class="news-item--desc">Bis zu einem Drittel aller Menschen mit Diabetes Typ
+                                            2 haben bereits bei ihrer Diagnose eine leichte Veränderung der Netzhaut.
+                                            &nbsp;</p>
+                                        <a href="/aktuelles/diabetes-f%C3%BChrt-oft-zu-augenerkrankungen"
+                                            title="Kompletten News-Beitrag &quot;Diabetes führt oft zu Augenerkrankungen&quot; anzeigen"
+                                            aria-label="Kompletten News-Beitrag &quot;Diabetes führt oft zu Augenerkrankungen&quot; anzeigen">weiterlesen
+                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="box-item news-item">
+                                        <span class="text-primary news-item--date">13. Mai 2019</span>
+                                        <h3 class="news-item--title">Opern für blinde und sehbehinderte Menschen in
+                                            Gelsenkirchen</h3>
+                                        <p class="news-item--desc">In der kommenden Spielzeit bietet das Musiktheater im
+                                            Revier in Gelsenkirchen wieder zahlreiche Höropern, also Opern mit
+                                            Audiodeskription. </p>
+                                        <a href="/aktuelles/opern-f%C3%BCr-blinde-und-sehbehinderte-menschen-in-gelsenkirchen"
+                                            title="Kompletten News-Beitrag &quot;Opern für blinde und sehbehinderte Menschen in Gelsenkirchen&quot; anzeigen"
+                                            aria-label="Kompletten News-Beitrag &quot;Opern für blinde und sehbehinderte Menschen in Gelsenkirchen&quot; anzeigen">weiterlesen
+                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 btn-more--ooc">
+                                    <a href="/aktuelles/" class="btn btn-primary btn-more icon-right"
+                                        title="Link führt zu einer Übersichtsseite mit allen Newseinträgen"
+                                        aria-label="Link führt zu einer Übersichtsseite mit allen Newseinträgen">Mehr
+                                        erfahren <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-md-4 col-md-offset-1 section-events">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="section--headline bp-big bg-contrast box-shadow-light">
+                                        <h2><strong>Termine</strong> und <br
+                                                class="hidden-xs hidden-sm hidden-md" /><strong>Ver&shy;an&shy;stal&shy;tungen</strong>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row box-group-default">
+
+
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    <div class="box-item event-item">
+                                        <span class="text-primary event-item--date-location"><span
+                                                class="event-item--date">20. Juni 2019</span> – <span
+                                                class="event-item--location">Hotel: A und O, Berlin Mitte, Köpenicker
+                                                Str. 127</span></span>
+                                        <h3 class="h5 event-item--title">Berlin, Berlin wir fahren nach Berlin...</h3>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    <div class="box-item event-item">
+                                        <span class="text-primary event-item--date-location"><span
+                                                class="event-item--date">20. Juni 2019</span> – <span
+                                                class="event-item--location">Ort</span></span>
+                                        <h3 class="h5 event-item--title">Seminar der FG Blindenführhundhalter</h3>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    <div class="box-item event-item">
+                                        <span class="text-primary event-item--date-location"><span
+                                                class="event-item--date">27. Juni 2019</span> – <span
+                                                class="event-item--location">Haus der Technik, Hörsaal A, Hollestraße 1
+                                                45127 Essen</span></span>
+                                        <h3 class="h5 event-item--title">Sinnesbehinderung und Beruf</h3>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 btn-more--ooc">
+                                    <a href="/aktuelles/veranstaltungen-termine/"
+                                        class="btn btn-primary btn-more icon-right"
+                                        title="Link führt zu einer Übersichtsseite mit allen anstehenden Veranstaltungen"
+                                        aria-label="Link führt zu einer Übersichtsseite mit allen anstehenden Veranstaltungen">Mehr
+                                        erfahren <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="newsletter-donation" class="section--newsletter-donation container-fluid ">
+        <div class="bg-contrast sp-big has--sh-big">
+            <div class="container">
+                <div class="row">
+
+                    <div id="newsletter" class="col-xs-12 col-md-7 section--newsletter">
+
+                        <div class="bg-image">
+                            <div class="bg-image--image"></div>
+                        </div>
+
+                        <div class="section--headline bp-big bg-contrast box-shadow-light">
+                            <h2>Immer auf dem Laufenden: <br class="hidden-xs hidden-sm hidden-md" /><strong>Abonnieren
+                                    Sie unseren Newsletter</strong></h2>
+                            <p class="fs-highlight hidden-xs">Mit unserem kostenlosen BSVN Newsletter sind Sie immer
+                                Up-to-Date und verpassen keine Ankündigungen, Neuigkeiten oder Termine mehr.</p>
+                            <div class="newsletter--form">
+
+                                <form method="post" name="we_global_form" onsubmit=";return true;" action="/index.php">
+                                    <div class="toggle-alert hidden" aria-hidden="true">
+                                        <div class="form-alert alert alert-danger bp-default text-highlight reset-border-radius"
+                                            role="alert">
+                                            <span class="h4 alert-title" role="heading"><strong>Fehlerhafte
+                                                    Eingabe</strong></span>
+                                            <p>Bitte füllen Sie alle Felder korrekt aus.</p>
+                                            <ol class="sr-only input-errors"></ol>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-xs-12 col-sm-8 col-md-7 col-lg-8">
+                                            <label for="subscribeMail" class="sr-only">Geben Sie hier Ihre E-Mail
+                                                Adresse ein, an welche der Newsletter geschickt werden soll.</label>
+                                            <span class="we we_subscribe"><input id="subscribeMail" class="form-control"
+                                                    required="" placeholder="E-Mail Adresse eingeben …" type="text"
+                                                    name="we_subscribe_email__" value="" /></span> </div>
+                                        <div class="col-xs-12 col-sm-8 col-md-7 col-lg-8 form-group-wdh">
+                                            <span>Bitte das folgende Feld <strong>nicht</strong> ausfüllen.</span>
+                                            <label for="emailRepeat" class="sr-only">Bitte geben Sie Ihre E-Mail Adresse
+                                                erneut ein.</label>
+                                            <input type="email" name="emailRepeat" id="emailRepeat" class="form-control"
+                                                placeholder="E-Mail Adresse wiederholen …" />
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-5 col-lg-4">
+                                            <button type="submit" name="saveRegisterNewsletter"
+                                                id="saveRegisterNewsletter" value="1"
+                                                class="btn btn-block btn-outline btn-primary icon-left"><i
+                                                    class="fa fa-paper-plane" aria-hidden="true"></i>Anmelden</button>
+                                            <input type="hidden" name="we_subscribe_html__" value="1"
+                                                id="hiddenField" />
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden sr-toggle-alert" aria-hidden="true">
+                                        <span class="h4 alert-title" role="heading"><strong>Fehlerhafte
+                                                Eingabe</strong></span>
+                                        <p>Bitte füllen Sie alle Felder korrekt aus.</p>
+                                        <ol class="input-errors"></ol>
+                                    </div>
+
+                                    <p class="fs-small text-gray form-legal-text">Wir nehmen Datenschutz ernst! Mit
+                                        Absenden des Formulares bestätigen Sie, dass Sie unsere <a
+                                            href="/datenschutz.php" class="link-default"
+                                            title="Link führt zu den Datenschutzbestimmungen des BSVN"
+                                            aria-label="Link führt zu den Datenschutzbestimmungen des BSVN">Datenschutzbestimmungen</a>
+                                        zur Kenntnis genommen haben.</p>
+
+                                    <input type="hidden" name="securityToken"
+                                        value="007479ed93b7598a1c2c0a31b912bcc2" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="donation" class="col-xs-12 col-md-4 col-md-offset-1 section--donation">
+                        <div class="sp-default hidden-md hidden-lg"></div>
+                        <h2 class="text-primary"><strong>Spenden um zu helfen!</strong></h2>
+                        <p>Für unsere Tätigkeit benötigen wir aktive Helfer und finanzielle Unterstützung.</p>
+                        <p>Werden auch Sie Freund und Förderer des BSVN und helfen Sie uns mit Ihrem Beitrag, die Arbeit
+                            für blinde und hochgradig sehbehinderte Menschen fortzusetzen.</p>
+                        <p>
+                            <a class="link-default icon-right" href="/mitmachen-unterstuetzen/"
+                                title="Link führt zu weiteren Informationen, wie Sie den BSVN unterstützen können"
+                                aria-label="Link führt zu weiteren Informationen, wie Sie den BSVN unterstützen können"
+                                lang="de" hreflang="de" target="">Erfahren Sie mehr darüber, wie Sie uns unterstützen
+                                können <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </p>
+                        <a href="https://secure.spendenbank.de/form/2373?langid=1"
+                            class="btn btn-more btn-primary icon-right" target="_blank"
+                            title="Link führt zum Spendenformular des BSVN - Öffnet sich in neuem Fenster"
+                            aria-label="Link führt zum Spendenformular des BSVN - Öffnet sich in neuem Fenster" lang=""
+                            hreflang="">Direkt online spenden <i class="fa fa-external-link-square"
+                                aria-hidden="true"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-grad-primary box-shadow" id="footer" tabindex="-1">
+        <div class="container">
+
+            <div class="to-top text-center">
+                <a href="#top" class="to-top--image" tabindex="-1" title="Link führt nach Oben zum Seitenanfang"
+                    aria-hidden="true"><img src="/cms/img/arrow-up-default.png?m=1550226325" alt="Arrow up"
+                        title="Pfeil nach oben- Springt zum Anfang der Seite" /></a>
+                <a href="#top" class="link-default text-contrast" title="Link führt nach Oben zum Seitenanfang"
+                    aria-label="Link führt nach Oben zum Seitenanfang">nach&nbsp;oben</a>
+            </div>
+
+            <div class="sp-default">
+
+                <div class="row">
+                    <div class="col-xs-6 col-sm-5 col-md-3 logo--container">
+                        <a href="/" class="logo--link bp-small bg-contrast" title="Link zur Startseite"
+                            aria-label="Link zur Startseite">
+                            <img src="/cms/img/logo-bsvn.svg?m=1550226329"
+                                alt="Logo des Blinden- und Sehbehindertenverband Nordrhein e.V. (BSVN)"
+                                title="Blinden- und Sehbehindertenverband Nordrhein e.V. (BSVN)" /> </a>
+                    </div>
+
+                    <div class="col-xs-12 col-md-7 col-lg-6 contact-details">
+                        <p><strong class="fs-highlight">Blinden- und Sehbehindertenverband Nordrhein e.V.</strong></p>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-5 col-lg-4">
+                                <p>Helen-Keller-Str. 5<br />
+                                    40670 Meerbusch</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-7 col-lg-8">
+                                <p>Telefon: <a href="tel:0049215996550" class="text-contrast"
+                                        title="Rufen Sie gerne bei uns an">02159 – 96 55 0</a> <br />
+                                    E-Mail: &nbsp;&nbsp;<a href="mailto:info@bsv-nordrhein.de"
+                                        class="text-contrast link-default" target="_blank"
+                                        title="E-Mail schreiben an info@bsv-nordrhein.de"
+                                        aria-label="E-Mail schreiben an info@bsv-nordrhein.de">info@bsv-nordrhein.de</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row meta--row">
+                    <div class="col-xs-12 col-sm-6 col-lg-4 col-lg-push-4 text-lg-center"></div>
+                    <div class="col-xs-12 col-sm-6 col-lg-4 col-lg-push-4 text-right text-xs-left">
+                        <ul class="list-inline meta--nav">
+                            <li class="meta--nav--entry"><a href="/kontakt.php" class="link-default text-contrast"
+                                    title="Link führt zur Kontakt Seite"
+                                    aria-label="Link führt zur Kontakt Seite">Kontakt</a></li>
+                            <li class="meta--nav--entry"><a href="/impressum.php" class="link-default text-contrast"
+                                    title="Link führt zum Impressum" aria-label="Link führt zum Impressum">Impressum</a>
+                            </li>
+                            <li class="meta--nav--entry"><a href="/datenschutz.php" class="link-default text-contrast"
+                                    title="Link führt zur Datenschutz Seite"
+                                    aria-label="Link führt zur Datenschutz Seite">Datenschutz</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-12 col-lg-4 col-lg-pull-8 text-center text-xs-left text-lg-left meta--copyright">
+                        <span class="text-contrast">Copyright &copy; 2019 BSVN. &nbsp;&nbsp;–&nbsp;&nbsp; All rights
+                            reserved.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="section--sponsor container">
+        <div class="row">
+            <div class="col-xs-12 sp-small text-center text-xs-left">
+                <span class="sponsor--content">Der Relaunch wurde ermöglicht durch die <a
+                        href="https://gkv-selbsthilfefoerderung-nrw.de" class="sponsor--link link-default"
+                        title="Link führt zur Website der Selbsthilfeförderung GKV NRW - Öffnet sich in neuem Fenster"
+                        aria-label="Link führt zur Website der Selbsthilfeförderung GKV NRW - Öffnet sich in neuem Fenster"
+                        target="_blank"><img src="/cms/img/selbsthilfefoerderung-gkv-nrw.png?m=1550226329"
+                            alt="Selbsthifeförderung GKV NRW" title="Logo der Selbsthilfeförderung" /><span
+                            class="sr-only">Selbsthilfeförderung GKV NRW</span></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sr-only">Diese Website wurde durch die <a href="https://www.e-nitio.com" target="_blank"
+            title="Internetagentur e-nitio mediasign" tabindex="-1">Kölner Internetagentur e-nitio mediasign GmbH &amp;
+            Co. KG</a> mit dem <a href="https://www.e-nitio.com/webedition-agentur-koeln.html" target="_blank"
+            title="webEdition Agentur Köln" tabindex="-1">CMS webEdition erstellt</a>.</div>
+
+</body>
+
+</html>

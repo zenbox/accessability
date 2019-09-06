@@ -1,0 +1,36 @@
+<div id="searchcontainer" tabindex="-1">
+    <div id="search-form">
+        <a href="#" id="close-mobile-search" title="Suche schließen" aria-label="Suche schließen">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+
+        <form method="post" name="sitesearch" action="/suche.php">
+            <p>Webseite durchsuchen:</p>
+            <div>
+                <div>
+                    <label for="search" class="sr-only">Suchbegriff</label>
+                    <input  type="text" class="form-control" name="we_lv_search_searchInput" id="search"
+                            placeholder="Suchbegriff eingeben …" value='' />
+                </div>
+                <div>
+                    <button type="submit" name="submitGlobalSearch" value="1">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        Suchen
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <a href="#" id="open-mobile-search" title="Suche öffnen" aria-label="Suche öffnen">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" id="open-mobile-nav" title="Navigation öffnen" aria-label="Navigation öffnen">
+        <span class="nav-icon">
+            <span class="stroke stroke-top"></span>
+            <span class="stroke stroke-center"></span>
+            <span class="stroke stroke-bottom"></span>
+        </span>
+    </a>
+</div>

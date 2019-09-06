@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Vergabeplattform Hessen</title>
+    <meta name="keywords" lang="de"
+        content="Ausschreibung, Elektronische Ausschreibung, Vergabe, Elektronische Vergabe, Ausschreibungsplattform, Vergabeplattform, Ausschreibungssoftware, Vergabesoftware, Vergabesystem, Vergabeworkflow, Elektronische Angebote, Elektronische Teilnahmeantr&auml;ge, Digitale Signatur" />
+    <meta name="keywords" lang="en"
+        content="eGovernment, tender, electronic tender, tendering, electronic tendering, public tender, platform solution, signature, tendering management" />
+    <meta name="page-type" content="Elektronische Vergabe, Elektronische Ausschreibung" />
+    <meta name="page-topic" content="Elektronische Vergabe, Elektronische Ausschreibung" />
+
+</head>
+
+<body class="min-width">
+
+    <div class="container-fluid">
+        <div id="kopf">
+            <div class="hessenmarkebox">
+                <img src="_images/img/logo_hessen.gif" alt="Hessen Logo" style="width: 160px; height: 82px; border: 0;">
+            </div>
+            <div class="bannerline_tina">
+                <div class="brandingbox">
+                    <img src="_images/img/banner_vergabeplattform.jpg" alt="Vergabeplattform Hessen"
+                        style="width: 459px; height: 59px; border: 0;">
+                </div>
+                <div class="headnavbox">
+                    <a href="http://www.hessen.de" class="navlink" tabindex="100"
+                        title="Landesportal Hessen">hessen.de</a>
+                    <span class="headnavdivider">|</span>
+                    <a href="index.jsp?function=Generic&amp;Page=impressum.htm" class="navlink" tabindex="110"
+                        title="Impressum">Impressum</a>
+                    <span class="headnavdivider">|</span>
+                    <a href="index.jsp?function=Generic&amp;Page=kontakt.jsp" class="navlink" tabindex="120"
+                        title="Kontakt">Kontakt</a>
+                </div>
+            </div>
+            <div class="welcome">
+                <div class="searchbox">
+                    <form id="hessen_search" name="hessen_search" action="PublicationSearchControllerServlet"
+                        method="get" style="padding:0px; margin:0px;">
+                        <input type="hidden" name="function" value="Search" />
+                        <input type="hidden" name="PublicationType" value="" />
+                        <input type="text" class="searchfield" name="Searchkey" placeholder="Suchebegriff eingeben"
+                            maxlength="190">
+                        <input type="submit" class="searchsubmit" value="Suche">&nbsp;
+
+                        <button type="submit" class="btn btn-text">
+                            <span>erweiterte Suche</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="topnavbox hidden-print">
+            <!-- /* Startseite */ -->
+            <div class="topnavlinkbox" style="margin-left: 15px;">
+                <a href="/NetServer/" class="topnavlink" accesskey="h" tabindex="1"
+                    title="Startseite Vergabeplattform">Startseite</a>
+            </div>
+            <!-- /* Ausschreibungssuche */ -->
+            <div class="topnavlinkbox">
+                <a class="topnavlink" tabindex="2" title="Ausschreibungssuche"
+                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;Gesetzesgrundlage=All&amp;Category=InvitationToTender&amp;thContext=publications">Ausschreibungssuche</a>
+            </div>
+            <!-- /* Beabsichtige Auftragsvergaben */ -->
+            <div class="topnavlinkbox">
+                <a class="topnavlink" tabindex="3" title="Beabsichtigte Auftragsvergaben"
+                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;Gesetzesgrundlage=All&amp;Category=PriorInformation&amp;thContext=preinformations">Beabsichtigte
+                    Auftragsvergaben</a>
+            </div>
+            <!-- /* Vergebene Aufträge */ -->
+            <div class="topnavlinkbox">
+                <a class="topnavlink" tabindex="4" title="Vergebene Auftr&auml;ge"
+                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;Gesetzesgrundlage=All&amp;Category=ContractAward&amp;thContext=awardPublications">Vergebene
+                    Aufträge</a>
+            </div>
+            <!-- /* Nutzungsbedingungen */ -->
+            <div class="topnavlinkbox">
+                <a href="index.jsp?function=Generic&amp;Page=teilnahmebedingungen.jsp" class="topnavlink"
+                    tabindex="5">Nutzungsbedingungen</a>
+            </div>
+
+            <!-- /* Datenschutz */ -->
+            <div class="topnavlinkbox">
+                <a href="index.jsp?function=Generic&amp;Page=datenschutz" class="topnavlink"
+                    tabindex="5">Datenschutz</a>
+            </div>
+
+            <!-- /* Registrierung */ -->
+            <div class="topnavlinkbox">
+                <a class="topnavlink" href="LoginControllerServlet?function=LoginForm">
+                    <span>Registrierung</span>
+                </a>
+            </div>
+            <!-- /* Häufige Fragen */ -->
+            <div class="topnavlinkbox">
+                <a href="index.jsp?function=Generic&amp;Page=FAQ.html" class="topnavlink" tabindex="7">Häufige
+                    Fragen</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="wrapper" class="container-fluid">
+
+        <div class="layout-left hidden-print">
+            <div>
+                <div class="navitabledata">
+                    <div class="navi_ebene1_aktiv">Ausschreibungssuche</div>
+                    <div class="navi_ebene1">
+                        <a class="subnavi" tabindex="10" title="Alle Ausschreibungen"
+                            href="PublicationSearchControllerServlet?function=SearchPublications&amp;Gesetzesgrundlage=All&amp;Category=InvitationToTender&amp;thContext=publications">Alle
+                            Ausschreibungen</a>
+                    </div>
+                    <div class="navi_ebene1">
+                        <a class="subnavi" tabindex="11" title="Liefer-/Dienstleistungen"
+                            href="PublicationSearchControllerServlet?function=SearchPublications&amp;Gesetzesgrundlage=VOL&amp;Category=InvitationToTender&amp;thContext=publications">Liefer-
+                            und Dienstleistungen<br /></a>
+                    </div>
+                    <div class="navi_ebene1">
+                        <a class="subnavi" tabindex="12" title="Bauleistungen"
+                            href="PublicationSearchControllerServlet?function=SearchPublications&amp;Gesetzesgrundlage=VOB&amp;Category=InvitationToTender&amp;thContext=publications">Bauleistungen<br /></a>
+                    </div>
+                </div>
+                <a name="ziel_anker"></a>
+                <div id="leftlogin">
+
+                    <form method="post" action="LoginControllerServlet?function=Submit">
+
+                        <div id="benutzerlogin">
+                            <div class="form-group">
+                                <label for="fname" class="displayNone">Benutzername</label>
+                                <input class="form-control" type="text" id="fname" name="UserName"
+                                    placeholder="Benutzername" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="displayNone">Passwort</label>
+                                <input class="form-control" type="password" id="password" name="Password"
+                                    placeholder="Passwort" required />
+                            </div>
+                            <input class="btn btn-primary" type="submit" value="Anmelden" />
+                            <br />
+                            <br />
+                            <a href="index.jsp?function=ForgotUsername.jsp">Benutzername vergessen?</a>
+                            <br />
+                            <a href="Users?function=ForgotPassword">Passwort vergessen?</a>
+                            <br />
+                            <a href="LoginControllerServlet?function=LoginForm">Neu Registrieren</a>
+
+                        </div>
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-content">
+            <div role="main">
+                <div class="content border">
+                    <div class="xyz">
+                        <h1 id="singleTopic">
+                            Ausschreibungen
+                            <small class="spaceTop">Übersicht über alle gefundenen Ausschreibungen</small>
+                        </h1>
+                        <br />
+                        <!--<th:block th:ref="hasPublications">-->
+                        <!--<button id="btnSearchSubmit" class="btn btn-primary showFilter" th:utext="#{Common.ShowFilter}" />-->
+                        <!--<br/>-->
+                        <!--<br/>-->
+                        <!--</th:block>-->
+                        <div>
+                            <br />
+                            <div class="filterHide">
+                                <form method="get" name="FilterForm" action="PublicationSearchControllerServlet">
+                                    <label for="tableFilterSelect" class="displayNone_">Anzahl der Ergebnisse pro
+                                        Seite</label>
+                                    <select class="form-control" id="tableFilterSelect" onchange="this.form.submit()"
+                                        name="Max">
+
+                                        <option value="10" selected="selected">10</option>
+
+                                        <option value="25">25</option>
+
+                                        <option value="50">50</option>
+
+                                        <option value="100">100</option>
+                                    </select>
+                                    <span><input id="searchSubmit" type="submit" class="btn btn-primary js-hide"
+                                            value="Suchen" /></span>
+                                    <input type="hidden" name="Order" value="desc" />
+                                    <input type="hidden" name="OrderBy" value="AuthorityName" />
+                                    <input type="hidden" name="Gesetzesgrundlage" value="All" />
+                                    <input type="hidden" name="PublicationType" value="2,3" />
+                                    <input type="hidden" name="function" value="SearchPublications" />
+                                    <input type="hidden" name="login" value="ApplicantLogin.jsp" />
+                                </form>
+                            </div>
+                            <br />
+                            <div class="tableSwitch">
+                                <table class="table table-responsive table-striped table-hover tableHorizontalHeader">
+                                    <caption>Suchergebnisse</caption>
+
+                                    <thead>
+                                        <tr>
+
+                                            <th class="tabelleFirstLine">
+                                                <a class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp"
+                                                    title="Nach dem Namen der Veröffentlichung sortieren">Ausschreibung</a>
+                                            </th>
+
+                                            <th class="tabelleFirstLine">
+                                                <a class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp"
+                                                    title="Nach dem Namen der ausschreibenden Stelle sortieren">Vergabestelle</a>
+                                            </th>
+
+                                            <th class="tabelleFirstLine">
+                                                <a class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp"
+                                                    title="Nach der Art der Ausschreibung sortieren">Verfahrensart</a>
+                                            </th>
+
+                                            <th class="tabelleFirstLine">
+                                                <a class="activeChange" id="tableLastHeader"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp"
+                                                    title="Nach der Abgabefrist sortieren">Abgabefrist</a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tr class="tableRow clickable-row publicationDetail" tabindex="0"
+                                        style="cursor: pointer;" data-oid="54321-NetTender-16cb989a53a-43a941b1e8ea12dd"
+                                        data-category="InvitationToTender">
+
+                                        <td class="tender">
+                                            Flachdachsanierung - Gerüstarbeiten (VG-0455-2019-1697)
+
+                                        </td>
+
+                                        <td class="tenderAuthority">LBIH NL West</td>
+
+                                        <td class="tenderType">
+
+                                            <span>VOB</span><span>, Öffentliche Ausschreibung</span>
+                                        </td>
+
+                                        <td class="tenderDeadline">15.10.2019 11:00</td>
+                                    </tr>
+                                    <tr class="tableRow clickable-row publicationDetail" tabindex="0"
+                                        style="cursor: pointer;" data-oid="54321-NetTender-16cbdef5293-4129aa2ae9db6cb6"
+                                        data-category="ContractAward">
+
+                                        <td class="tender">
+                                            Destatis_Erneuerung Türanlage Haupteingang BT A (VG-0455-2019-1507)
+
+                                        </td>
+
+                                        <td class="tenderAuthority">LBIH NL West</td>
+
+                                        <td class="tenderType">
+
+                                            <span>VOB</span><span>, Freihändige Vergabe</span>
+                                        </td>
+
+                                        <td class="tenderDeadline"></td>
+                                    </tr>
+                                    <tr class="tableRow clickable-row publicationDetail" tabindex="0"
+                                        style="cursor: pointer;" data-oid="54321-NetTender-1696b5beef1-5056c7ea8d427a4f"
+                                        data-category="ContractAward">
+
+                                        <td class="tender">
+                                            DstGeb.I_-_Elektro_-_UV_-_Geb.A+B (VG-0455-2019-0395)
+
+                                        </td>
+
+                                        <td class="tenderAuthority">LBIH NL West</td>
+
+                                        <td class="tenderType">
+
+                                            <span>VOB</span><span>, Beschränkte Ausschreibung</span>
+                                        </td>
+
+                                        <td class="tenderDeadline"></td>
+                                    </tr>
+                                    <tr class="tableRow clickable-row publicationDetail" tabindex="0"
+                                        style="cursor: pointer;" data-oid="54321-NetTender-16c8f620094-4a3cd10bc87ee3be"
+                                        data-category="InvitationToTender">
+
+                                        <td class="tender">
+                                            Innenputz und WDVS Haus F + G (VG-0455-2019-1567)
+
+                                        </td>
+
+                                        <td class="tenderAuthority">LBIH NL West</td>
+
+                                        <td class="tenderType">
+
+                                            <span>VOB</span><span>, Offenes Verfahren</span>
+                                        </td>
+
+                                        <td class="tenderDeadline">06.09.2019 09:30</td>
+                                    </tr>
+                                    <tr class="tableRow clickable-row publicationDetail" tabindex="0"
+                                        style="cursor: pointer;" data-oid="54321-NetTender-1697235ff66-7d46caf9abfa610b"
+                                        data-category="ContractAward">
+
+                                        <td class="tender">
+                                            Rahmenvertrag für Bundesliegenschaften Wiesbaden, RTK, MTK - Dachdecker- und
+                                            Klempnerarbeiten (VG-0455-2019-0111)
+
+                                        </td>
+
+                                        <td class="tenderAuthority">LBIH NL West</td>
+
+                                        <td class="tenderType">
+
+                                            <span>VOB</span><span>, Beschränkte Ausschreibung</span>
+                                        </td>
+
+                                        <td class="tenderDeadline"></td>
+                                    </tr>
+                                    <tr class="tableRow clickable-row publicationDetail" tabindex="0"
+                                        style="cursor: pointer;" data-oid="54321-NetTender-16c70d467a9-ae407981e2b35c9"
+                                        data-category="ContractAward">
+
+                                        <td class="tender">
+                                            Mosburg, Klempnerarbeiten (VG-0455-2019-0963)
+
+                                        </td>
+
+                                        <td class="tenderAuthority">LBIH NL West</td>
+
+                                        <td class="tenderType">
+
+                                            <span>VOB</span><span>, Freihändige Vergabe</span>
+                                        </td>
+
+                                        <td class="tenderDeadline"></td>
+                                    </tr>
+                                    <tr class="tableRow clickable-row publicationDetail" tabindex="0"
+                                        style="cursor: pointer;" data-oid="54321-NetTender-16cd2f80cbd-6afc910a6df238c2"
+                                        data-category="ContractAward">
+
+                                        <td class="tender">
+                                            BKA W1, Geb. I Erneuerung WC-Anlagen HKLS (VG-0455-2019-1338)
+
+                                        </td>
+
+                                        <td class="tenderAuthority">LBIH NL West</td>
+
+                                        <td class="tenderType">
+
+                                            <span>VOB</span><span>, Beschränkte Ausschreibung</span>
+                                        </td>
+
+                                        <td class="tenderDeadline"></td>
+                                    </tr>
+                                    <tr class="tableRow clickable-row publicationDetail" tabindex="0"
+                                        style="cursor: pointer;" data-oid="54321-NetTender-169e24b5fac-2c26ee7ec8a935a3"
+                                        data-category="ContractAward">
+
+                                        <td class="tender">
+                                            Erneuerung Steuerung mit Hydraulik Aggregat (VG-0455-2019-0631)
+
+                                        </td>
+
+                                        <td class="tenderAuthority">LBIH NL West</td>
+
+                                        <td class="tenderType">
+
+                                            <span>VOB</span><span>, Freihändige Vergabe</span>
+                                        </td>
+
+                                        <td class="tenderDeadline"></td>
+                                    </tr>
+                                    <tr class="tableRow clickable-row publicationDetail" tabindex="0"
+                                        style="cursor: pointer;" data-oid="54321-NetTender-16a49513875-458834c476b00d51"
+                                        data-category="ContractAward">
+
+                                        <td class="tender">
+                                            Staatsdomäne Rauenthal, Sanierung Trinkwassersanierung (VG-0455-2019-0836)
+
+                                        </td>
+
+                                        <td class="tenderAuthority">LBIH NL West</td>
+
+                                        <td class="tenderType">
+
+                                            <span>VOB</span><span>, Freihändige Vergabe</span>
+                                        </td>
+
+                                        <td class="tenderDeadline"></td>
+                                    </tr>
+                                    <tr class="tableRow clickable-row publicationDetail" tabindex="0"
+                                        style="cursor: pointer;" data-oid="54321-NetTender-16a9cb8a7d1-6bd22986681ed53d"
+                                        data-category="ContractAward">
+
+                                        <td class="tender">
+                                            Erweiterung der Videoanlage in der Polizeistation Idstein
+                                            (VG-0455-2019-0898)
+
+                                        </td>
+
+                                        <td class="tenderAuthority">LBIH NL West</td>
+
+                                        <td class="tenderType">
+
+                                            <span>VOB</span><span>, Freihändige Vergabe</span>
+                                        </td>
+
+                                        <td class="tenderDeadline"></td>
+                                    </tr>
+                                </table>
+
+                                <table class="table tableLeftHeader">
+                                    <caption>Teilnahmen</caption>
+
+                                    <tbody class="tableLeftHeaderBlock clickable-row publicationDetail" tabindex="0"
+                                        data-oid="54321-NetTender-16cb989a53a-43a941b1e8ea12dd"
+                                        data-category="InvitationToTender">
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der Veröffentlichung sortieren"
+                                                    class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Ausschreibung</a>
+                                            </td>
+                                            <td>
+                                                Flachdachsanierung - Gerüstarbeiten (VG-0455-2019-1697)
+                                            </td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der ausschreibenden Stelle sortieren"
+                                                    class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Vergabestelle</a>
+                                            </td>
+                                            <td>LBIH NL West</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Art der Ausschreibung sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Verfahrensart</a>
+                                            </td>
+                                            <td>VOB, Öffentliche Ausschreibung</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Abgabefrist sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Abgabefrist</a>
+                                            </td>
+                                            <td>15.10.2019 11:00</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tbody class="tableLeftHeaderBlock clickable-row publicationDetail" tabindex="0"
+                                        data-oid="54321-NetTender-16cbdef5293-4129aa2ae9db6cb6"
+                                        data-category="ContractAward">
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der Veröffentlichung sortieren"
+                                                    class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Ausschreibung</a>
+                                            </td>
+                                            <td>
+                                                Destatis_Erneuerung Türanlage Haupteingang BT A (VG-0455-2019-1507)
+                                            </td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der ausschreibenden Stelle sortieren"
+                                                    class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Vergabestelle</a>
+                                            </td>
+                                            <td>LBIH NL West</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Art der Ausschreibung sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Verfahrensart</a>
+                                            </td>
+                                            <td>VOB, Freihändige Vergabe</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Abgabefrist sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Abgabefrist</a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tbody class="tableLeftHeaderBlock clickable-row publicationDetail" tabindex="0"
+                                        data-oid="54321-NetTender-1696b5beef1-5056c7ea8d427a4f"
+                                        data-category="ContractAward">
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der Veröffentlichung sortieren"
+                                                    class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Ausschreibung</a>
+                                            </td>
+                                            <td>
+                                                DstGeb.I_-_Elektro_-_UV_-_Geb.A+B (VG-0455-2019-0395)
+                                            </td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der ausschreibenden Stelle sortieren"
+                                                    class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Vergabestelle</a>
+                                            </td>
+                                            <td>LBIH NL West</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Art der Ausschreibung sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Verfahrensart</a>
+                                            </td>
+                                            <td>VOB, Beschränkte Ausschreibung</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Abgabefrist sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Abgabefrist</a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tbody class="tableLeftHeaderBlock clickable-row publicationDetail" tabindex="0"
+                                        data-oid="54321-NetTender-16c8f620094-4a3cd10bc87ee3be"
+                                        data-category="InvitationToTender">
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der Veröffentlichung sortieren"
+                                                    class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Ausschreibung</a>
+                                            </td>
+                                            <td>
+                                                Innenputz und WDVS Haus F + G (VG-0455-2019-1567)
+                                            </td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der ausschreibenden Stelle sortieren"
+                                                    class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Vergabestelle</a>
+                                            </td>
+                                            <td>LBIH NL West</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Art der Ausschreibung sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Verfahrensart</a>
+                                            </td>
+                                            <td>VOB, Offenes Verfahren</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Abgabefrist sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Abgabefrist</a>
+                                            </td>
+                                            <td>06.09.2019 09:30</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tbody class="tableLeftHeaderBlock clickable-row publicationDetail" tabindex="0"
+                                        data-oid="54321-NetTender-1697235ff66-7d46caf9abfa610b"
+                                        data-category="ContractAward">
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der Veröffentlichung sortieren"
+                                                    class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Ausschreibung</a>
+                                            </td>
+                                            <td>
+                                                Rahmenvertrag für Bundesliegenschaften Wiesbaden, RTK, MTK - Dachdecker-
+                                                und Klempnerarbeiten (VG-0455-2019-0111)
+                                            </td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der ausschreibenden Stelle sortieren"
+                                                    class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Vergabestelle</a>
+                                            </td>
+                                            <td>LBIH NL West</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Art der Ausschreibung sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Verfahrensart</a>
+                                            </td>
+                                            <td>VOB, Beschränkte Ausschreibung</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Abgabefrist sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Abgabefrist</a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tbody class="tableLeftHeaderBlock clickable-row publicationDetail" tabindex="0"
+                                        data-oid="54321-NetTender-16c70d467a9-ae407981e2b35c9"
+                                        data-category="ContractAward">
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der Veröffentlichung sortieren"
+                                                    class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Ausschreibung</a>
+                                            </td>
+                                            <td>
+                                                Mosburg, Klempnerarbeiten (VG-0455-2019-0963)
+                                            </td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der ausschreibenden Stelle sortieren"
+                                                    class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Vergabestelle</a>
+                                            </td>
+                                            <td>LBIH NL West</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Art der Ausschreibung sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Verfahrensart</a>
+                                            </td>
+                                            <td>VOB, Freihändige Vergabe</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Abgabefrist sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Abgabefrist</a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tbody class="tableLeftHeaderBlock clickable-row publicationDetail" tabindex="0"
+                                        data-oid="54321-NetTender-16cd2f80cbd-6afc910a6df238c2"
+                                        data-category="ContractAward">
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der Veröffentlichung sortieren"
+                                                    class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Ausschreibung</a>
+                                            </td>
+                                            <td>
+                                                BKA W1, Geb. I Erneuerung WC-Anlagen HKLS (VG-0455-2019-1338)
+                                            </td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der ausschreibenden Stelle sortieren"
+                                                    class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Vergabestelle</a>
+                                            </td>
+                                            <td>LBIH NL West</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Art der Ausschreibung sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Verfahrensart</a>
+                                            </td>
+                                            <td>VOB, Beschränkte Ausschreibung</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Abgabefrist sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amamp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Abgabefrist</a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tbody class="tableLeftHeaderBlock clickable-row publicationDetail" tabindex="0"
+                                        data-oid="54321-NetTender-169e24b5fac-2c26ee7ec8a935a3"
+                                        data-category="ContractAward">
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der Veröffentlichung sortieren"
+                                                    class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Ausschreibung</a>
+                                            </td>
+                                            <td>
+                                                Erneuerung Steuerung mit Hydraulik Aggregat (VG-0455-2019-0631)
+                                            </td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der ausschreibenden Stelle sortieren"
+                                                    class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Vergabestelle</a>
+                                            </td>
+                                            <td>LBIH NL West</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Art der Ausschreibung sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Verfahrensart</a>
+                                            </td>
+                                            <td>VOB, Freihändige Vergabe</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Abgabefrist sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Abgabefrist</a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tbody class="tableLeftHeaderBlock clickable-row publicationDetail" tabindex="0"
+                                        data-oid="54321-NetTender-16a49513875-458834c476b00d51"
+                                        data-category="ContractAward">
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der Veröffentlichung sortieren"
+                                                    class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Ausschreibung</a>
+                                            </td>
+                                            <td>
+                                                Staatsdomäne Rauenthal, Sanierung Trinkwassersanierung
+                                                (VG-0455-2019-0836)
+                                            </td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der ausschreibenden Stelle sortieren"
+                                                    class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Vergabestelle</a>
+                                            </td>
+                                            <td>LBIH NL West</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Art der Ausschreibung sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Verfahrensart</a>
+                                            </td>
+                                            <td>VOB, Freihändige Vergabe</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Abgabefrist sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Abgabefrist</a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tbody class="tableLeftHeaderBlock clickable-row publicationDetail" tabindex="0"
+                                        data-oid="54321-NetTender-16a9cb8a7d1-6bd22986681ed53d"
+                                        data-category="ContractAward">
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der Veröffentlichung sortieren"
+                                                    class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Ausschreibung</a>
+                                            </td>
+                                            <td>
+                                                Erweiterung der Videoanlage in der Polizeistation Idstein
+                                                (VG-0455-2019-0898)
+                                            </td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach dem Namen der ausschreibenden Stelle sortieren"
+                                                    class="activeChange tableActive"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=AuthorityName&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Vergabestelle</a>
+                                            </td>
+                                            <td>LBIH NL West</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Art der Ausschreibung sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=TenderLaw&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Verfahrensart</a>
+                                            </td>
+                                            <td>VOB, Freihändige Vergabe</td>
+                                        </tr>
+                                        <tr class="tableRowLeft">
+                                            <td class="tableHeaderLeft">
+                                                <a title="Nach der Abgabefrist sortieren" class="activeChange"
+                                                    href="PublicationSearchControllerServlet?function=SearchPublications&amp;OrderBy=EndTime&amp;Order=asc&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">Abgabefrist</a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tableFooter">
+                                <div class="tableFooterWrappingDiv">
+                                    <!--<p class="tableFooterText" th:ref="paginationStatsText" />-->
+                                </div>
+                                <div class="tableFooterPaginationDiv">
+                                    <ul class="pagination">
+                                        <li class="active">
+                                            <a class="active background-blue-important border-blue-important"
+                                                href="PublicationSearchControllerServlet?function=SearchPublications&amp;Order=desc&amp;OrderBy=AuthorityName&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;Start=0&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">1</a>
+                                        </li>
+                                        <li>
+                                            <a class="color-main-important"
+                                                href="PublicationSearchControllerServlet?function=SearchPublications&amp;Order=desc&amp;OrderBy=AuthorityName&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;Start=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">2</a>
+                                        </li>
+                                        <li>
+                                            <a class="color-main-important"
+                                                href="PublicationSearchControllerServlet?function=SearchPublications&amp;Order=desc&amp;OrderBy=AuthorityName&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;Start=20&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp">3</a>
+                                        </li>
+                                        <li>
+                                            <a><span class="color-main">...</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="PublicationSearchControllerServlet?function=SearchPublications&amp;Order=desc&amp;OrderBy=AuthorityName&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;Start=520&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp"
+                                                class="color-main-important">53</a>
+                                        </li>
+                                        <li>
+                                            <a href="PublicationSearchControllerServlet?function=SearchPublications&amp;Order=desc&amp;OrderBy=AuthorityName&amp;Gesetzesgrundlage=All&amp;Max=25&amp;Max=10&amp;Start=10&amp;PublicationType=2%2C3&amp;login=ApplicantLogin.jsp"
+                                                title="Next Page"><span class="color-main">&rsaquo;</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tableFooterWrappingDiv">&nbsp;</div>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <address>&copy; Hessische Zentrale für Datenverarbeitung,<br />Mainzer Straße 29, 65185 Wiesbaden
+                </address>
+                <span class="blackFooter">Zeit der Vergabeplattform</span>
+
+                <span class="blackFooter">05.09.2019 06:53:09</span>
+            </footer>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+</body>
+
+</html>
