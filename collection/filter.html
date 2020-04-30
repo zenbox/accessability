@@ -1,0 +1,44 @@
+<html>
+    <body style="width:100%;height:100%">
+        <textarea id="input" style="width:40%;height:90%;">
+            <div class="views-field views-field-php"> <span class="field-content"><a class="linkwrapper" href="https://wirtschaft.hessen.de/presse/pressemitteilung/94-neue-windenergieanlagen-2017-sorgen-fuer-atom-und-kohlefreien-strom-hessen">
+            <div class="slider-ht-top">
+            <div class="image"><img typeof="foaf:Image" src="https://www.hessen.de/sites/default/files/styles/slider-hessen-today/public/media/icons_hessen_in_zahlen/hessen_icon_windrad_white.png?itok=tUl_xAQS" width="70" height="70" /></div>
+            <div class="amount">1.044</div>
+            </div>
+            <div class="slider-ht-text">Windenergieanlagen in Hessen</div>
+            </a></span> </div>
+            </li>
+        </textarea>
+        <textarea id="output" style="width:40%;height:90%;"></textarea>
+        <button>semantic only</button>
+    </body>
+    <script>
+window.onload = function () {
+    // - - - - -
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', function(evt){
+            let txt = document.querySelector('#input').value;
+            // remove non sematic elements
+            // div, span, i, b, u
+            let repl = txt.replace(/<[\/]*(i|b|div|span|u)[ a-z0-9="'-_]*>/gi, '');
+
+            //remove scripts ad styles
+             repl = repl.replace(/<(style|script)[ a-z0-9="'-_]*><\/(style|script)>/gi, '');
+
+            // remove class attributes
+            repl = repl.replace(/class="[ a-z0-9=-_"]*/gi, '');
+
+            // remove double blanks
+            repl = repl.replace(/[ ]{2,}/gi, ' ');
+            let out = document.querySelector('#output')
+            out.value = repl;
+            console.log(txt);
+            console.log('- - - - -')
+            console.log(repl);
+            console.log('- - - - -')
+        });
+    // - - - - -
+        };
+    </script>
+    </html>
