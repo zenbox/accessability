@@ -1,7 +1,28 @@
+/** Some accessability scripts
+ *
+ * @package Webapplication
+ * @module 
+ * @author Michael <michael.reichart@gfu.net>
+ * @version v1.0.0
+ * @since 2020-04-20
+ * @see i.e. inspired by ... {link to}
+ * @license MIT {https://opensource.org/licenses/MIT}
+ * @copyright (c) 2020 Michael Reichart, Cologne
+ */
+
 {
-    // - - - - - - - - - -
-    // The keys (e.g. valueMissing) map onto
-    // a key in the `input.validity` object
+    let fontSizeSelector = document.querySelector('#font-size');
+    fontSizeSelector.addEventListener('click', (event) => {
+        event
+            .preventDefault();
+        document
+            .querySelector('html')
+            .classList.toggle('bigger-font');
+    });
+
+    // Own messages
+    // setCustomValidity(message)
+
     const customMessages = {
         valueMissing: 'Gib was ein!', // `required` attr
         emailMismatch: 'Das ist mal keine Email Adresse!', // Invalid email
@@ -33,5 +54,5 @@
         input.addEventListener('input', checkValidity)
         input.addEventListener('invalid', checkValidity)
     });
-    // - - - - - - - - - -
+
 }
