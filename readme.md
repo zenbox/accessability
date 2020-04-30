@@ -57,7 +57,7 @@ Rückfragen gerne per Mail an michael.reichart@gfu.net.
 
 ### Darkmode
 - [Darkmode in Chrome](chrome-extension://kgejglhpjiefppelpmljglcjbhoiplfn/chromevox/background/options.html)
-- [Dark Mode]( ￼ https://www.howtogeek.com/446198/how-to-force-dark-mode-on-every-website-in-google-chrome/ ￼ )
+- [Dark Mode](https://www.howtogeek.com/446198/how-to-force-dark-mode-on-every-website-in-google-chrome/ ￼ )
 - [Dark Mode Color Adjust](https://drafts.csswg.org/css-color-adjust-1/ ￼ )
 - [Dark Mode CSS](https://blog.thomaspuppe.de/dark-mode-css )
 - [Dark Mode Media Attribut](https://developer.mozilla.org/en-US/docs/Web/CSS/@media ￼ )
