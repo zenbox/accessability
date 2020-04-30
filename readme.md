@@ -43,9 +43,9 @@ Rückfragen gerne per Mail an michael.reichart@gfu.net.
 - [Leicht-Lesbar](http://leichtlesbar.ch/html/)
 - [Farbkombinationen inkl. VarianteN für Menschen mit Protanopia, Deuteranopia, usw. ￼ ](https://coolors.co/)
 - [Kontrastrechner](https://www.leserlich.info/werkzeuge/kontrastrechner/index.php ￼ )
-- [Timed Text Tracks]( ￼ https://html.spec.whatwg.org/multipage/media.html#timed-text-tracks ￼ )
+- [Timed Text Tracks](https://html.spec.whatwg.org/multipage/media.html#timed-text-tracks ￼ )
 - [WHATWG Multipage Spec](https://html.spec.whatwg.org/multipage/media.html#the-track-element ￼ )
-- [ ￼ Ein Tool für Farben](https://learnui.design/tools/accessible-color-generator.html ￼ )
+- [Ein Tool für Farben](https://learnui.design/tools/accessible-color-generator.html ￼ )
 - [Hiding Content](https://snook.ca/archives/html_and_css/hiding-content-for-accessibility ￼ )
 - [Worauf bei ARIA zu achten ist](https://www.barrierefreies-webdesign.de/knowhow/msaa/checkpunkte.html)
 - [How to Review Accessability](https://developers.google.com/web/fundamentals/accessibility/how-to-review)
@@ -56,7 +56,6 @@ Rückfragen gerne per Mail an michael.reichart@gfu.net.
 - [Bootstrap Popover](https://getbootstrap.com/docs/4.1/components/popovers/ ￼ )
 
 ### Darkmode
-- Darkmode in Chrome (chrome-extension://kgejglhpjiefppelpmljglcjbhoiplfn/chromevox/background/options.html)
 - [Dark Mode](https://www.howtogeek.com/446198/how-to-force-dark-mode-on-every-website-in-google-chrome/ ￼ )
 - [Dark Mode Color Adjust](https://drafts.csswg.org/css-color-adjust-1/ ￼ )
 - [Dark Mode CSS](https://blog.thomaspuppe.de/dark-mode-css )
