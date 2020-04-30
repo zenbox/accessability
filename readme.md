@@ -56,7 +56,7 @@ Rückfragen gerne per Mail an michael.reichart@gfu.net.
 - [Bootstrap Popover](https://getbootstrap.com/docs/4.1/components/popovers/ ￼ )
 
 ### Darkmode
-- [Darkmode in Chrome](chrome-extension://kgejglhpjiefppelpmljglcjbhoiplfn/chromevox/background/options.html)
+- Darkmode in Chrome (chrome-extension://kgejglhpjiefppelpmljglcjbhoiplfn/chromevox/background/options.html)
 - [Dark Mode](https://www.howtogeek.com/446198/how-to-force-dark-mode-on-every-website-in-google-chrome/ ￼ )
 - [Dark Mode Color Adjust](https://drafts.csswg.org/css-color-adjust-1/ ￼ )
 - [Dark Mode CSS](https://blog.thomaspuppe.de/dark-mode-css )
