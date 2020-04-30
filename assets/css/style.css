@@ -1,202 +1,101 @@
-/* Document */
- html {
-     font-family: 'Roboto Condensed';
-     font-size: 18px;
-     line-height: 1.3;
- }
+/** Some styles
+  *
+  * @package Webapplication
+  * @module i.e. header
+  * @author Michael Reichart <michael@zenbox.de>
+  * @since 2020-04-20
+  * @version 1.0.0
+  * @see i.e. inspired by ... {link to}
+  * @license MIT {https://opensource.org/licenses/MIT}
+  * @copyright (c) 2020 Michael Reichart, Cologne
+  */
 
- html,
- html * {
-     box-sizing: border-box;
- }
+/**  BASE */
+html,
+html * {
+    box-sizing: border-box;
+}
 
- body {
-     background-color: white;
-     color: black;
-     display: flex;
-     flex-direction: column;
- }
+* {
+    box-sizing: border-box;
+    transition-property: all;
+    transition-duration: 120ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0;
+}
 
- body>* {
-     padding: 0.25rem;
- }
+@media screen {
 
- .brand::before {
-     content: url(assets/figures/skull.svg);
-     display: block;
-     width: 3rem;
-     height: 3rem;
-     border: 1px dotted black;
-     padding: 0.25rem;
- }
 
- @media speech {
-     * {
-         -webkit-speak: never;
-         -webkit-speak-as: spell-out;
-     }
- }
+    html {
+        font-family: sans-serif;
+        font-size: 16px;
+        /* base size for rem! */
+        line-height: 1.358;
+    }
 
- figure {
-     margin-left: 0;
- }
+    html.bigger-font {
+        font-size: 24px;
+    }
+}
 
- figcaption {
-     font-size: 0.8rem;
- }
+@media screen and (max-width:768px) {
 
- .sr-only {
-     position: absolute;
-     height: 1px;
-     width: 1px;
-     clip: rect(1px 1px 1px 1px); // IE 6 and 7
-     clip: rect(1px, 1px, 1px, 1px);
-     clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
-     -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
- }
 
- strong {}
+    html {
+        font-family: sans-serif;
+        font-size: 12px;
 
- abbr[title] {
-     border-bottom: 1px dotted
- }
+    }
 
- /* Accessable navigation */
- nav ul {
-     margin: 0;
-     padding: 0;
-     list-style-type: none;
- }
+    html.bigger-font {
+        font-size: 16px;
+    }
+}
 
- nav a[href] {
-     display: inline-block;
-     width: 100%;
- }
 
- nav li dfn,
- a dfn {
-     position: absolute;
-     height: 1px;
-     width: 1px;
-     clip: rect(1px 1px 1px 1px); // IE 6 and 7
-     clip: rect(1px, 1px, 1px, 1px);
-     clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
-     -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
- }
+h1 {
+    font-size: 3rem;
+    /* 48px !*/
+}
 
- nav li li {
-     padding-left: 1rem;
- }
+h2 {
+    font-size: 2rem;
+}
 
- /* Accessable top navigation */
- .anchor,
- .anchor:visited {
-     border: 2px solid rgba(0, 0, 0, .16);
-     border-radius: 2px;
-     color: #2228af;
-     cursor: pointer;
-     display: inline-block;
-     font-size: 14px;
-     line-height: 20px;
-     margin: 6px 11px;
-     min-height: 32px;
-     text-decoration: underline;
-     text-align: center;
-     width: 106px
- }
+p {
+    font-size: 1rem;
+}
 
- .anchor:not(:focus) {
-     clip: rect(1px, 1px, 1px, 1px);
-     overflow: hidden;
-     position: absolute;
-     padding: 0
- }
+/**  LAYOUT */
 
- a:link {
-     color: #0000cc;
- }
+/**  THEME */
+.upper{
+    text-transform: uppercase;
+}
 
- a:visited {
-     color: #660088;
- }
+/**  CHANGING STATES (BEHAVIOUR) */
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    -webkit-clip-path: none;
+    clip-path: none;
+}
 
- /* Form */
- form * {
-     transition-property: all;
-     transition-delay: 0;
-     transition-duration: 200ms;
-     transition-timing-function: ease-in;
- }
-
- form {
-     width: 20rem;
-     border: 1px dotted black;
-     padding: 0;
-     margin-top: 2rem;
- }
-
- form fieldset {
-     display: flex;
-     flex-direction: column;
-     margin: 0;
-     margin-left: 0rem;
-     border: 0;
- }
-
- legend {
-     border: 1px dotted black;
-     position: relative;
-     top: -1.3rem;
-     left: -0.8rem;
-     border-bottom: 0;
-     background-color: white;
- }
-
- label,
- button {
-     font-size: 0.8rem;
-     margin-top: 0.5rem;
- }
-
- input,
- select,
- button {
-     -webkit-appearance: none;
-     -moz-appearance: none;
-     width: 100%;
-     padding: 0.25rem;
-     border: 1px dotted black;
-     border-radius: 0;
- }
-
- button {
-     background-color: hsla(0, 0%, 0%, 0.15)
- }
-
- button:active {
-     background-color: rgba(13, 47, 242, 0.15)
- }
-
- input {
-     outline: none;
-     border-width: 1px;
-     border-style: dotted;
-     border-color: white;
- }
-
- input:valid {
-     border-color: hsla(140, 50%, 50%, 0.85);
- }
-
- input:invalid {
-     border-color: hsla(0, 50%, 50%, 0.85);
- }
-
- input:focus {
-     margin-bottom: -0.9rem;
-     z-index: 99;
-     padding: 0.5rem;
-     font-size: 1.2rem;
-     border-color: white;
-     box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5)
- }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+}
