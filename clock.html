@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- - - - - - - - - - - -->
+    <style>
+        time {
+            font-family: 'Share Tech Mono';
+            font-size: 4vw;
+
+            display: block;
+            width: 20vw;
+            text-align: center;
+
+            position: absolute;
+            top: 65vw;
+            left: calc(50vw - 10vw);
+            z-index: 10;
+
+            color: hsla(0, 0%, 0%, 0.25);
+        }
+
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            height: 80vh;
+            z-index: 0;
+            margin: 0 auto;
+        }
+
+        #hours,
+        #minutes {
+            transition: all 500ms ease-in-out;
+        }
+
+        #seconds {
+            transition: all 50ms ease-in-out;
+        }
+    </style>
+    <output></output>
+    <svg id="clock" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(400,400) rotate(180)" style="fill:hsla(0,0%,0%,1)">
+            <g>
+                <path id="segment" d="M 700 400 A 280 280 0 1 1  400 100" stroke="none"
+                    fill="hsla(0, 0%, 25%, 0.25)" />
+            </g>
+            <g id="hours" transform="translate(0,0) rotate(0)">
+                <rect x="-15" y="-20" width="30" height="200" />
+            </g>
+            <g id="minutes">
+                <rect x="-7.5" y="-30" width="15" height="240" />
+            </g>
+            <g id="seconds">
+                <rect x="-3" y="0" width="6" height="250" style="fill:red;" />
+            </g>
+
+        </g>
+
+        <g>
+            <circle cx="400" cy="400" r="300" style="fill:transparent;stroke:black;stroke-width:40px;" />
+            <circle cx="400" cy="400" r="12" style="fill:red;" />
+            <circle cx="400" cy="400" r="8" style="fill:black;" />
+        </g>
+
+        <g transform="translate(400,400) rotate(0)">
+            <rect x="-10" y="250" width="20" height="20" />
+        </g>
+        <g transform="translate(400,400) rotate(90)">
+            <rect x="-10" y="250" width="20" height="20" />
+        </g>
+        <g transform="translate(400,400) rotate(180)">
+            <rect x="-10" y="250" width="20" height="20" />
+        </g>
+        <g transform="translate(400,400) rotate(270)">
+            <rect x="-10" y="250" width="20" height="20" />
+        </g>
+
+
+    </svg>
+    <time>none</time>
+
+    <script>
+        class Clock {
+            constructor(date) {
+                this.digitalClock = document.querySelector('time');
+                this.hours = document.querySelector('#hours');
+                this.minutes = document.querySelector('#minutes');
+                this.seconds = document.querySelector('#seconds');
+                this.update();
+            }
+
+            update() {
+                this._date = new Date();
+
+                this._hour = this._date.getHours();
+                this._minute = this._date.getMinutes();
+                this._second = this._date.getSeconds();
+
+                this._sH = this.formatAsString(this._hour);
+                this._sM = this.formatAsString(this._minute);
+                this._sS = this.formatAsString(this._second);
+            }
+
+            get hour() {
+                if (this._hour >= 12) this._hour -= 12;
+                return this._hour;
+            }
+
+            get minute() {
+                return this._minute;
+            }
+
+            get second() {
+                return this._second;
+            }
+
+            formatAsString(v) {
+                if (v < 10)
+                    return `0${v}`;
+                else
+                    return v;
+            }
+
+            setDigitalValue() {
+                this.digitalClock.innerHTML = `${this._sH}:${this._sM}:${this._sS}`;
+            }
+
+            setAnalogValue() {
+                let hour = (this._hour + (this._minute / 60)) * (360 / 12);
+                let minute = this._minute * (360 / 60);
+                let second = this._second * (360 / 60);
+                let pauseBegin = this._minute;
+
+                // document.querySelector('output').innerHTML = `<tt>${hour}, ${minute}, ${second}</tt>`;
+
+                this.hours.setAttribute(
+                    'transform',
+                    `translate(0,0) rotate(${hour})`);
+                this.minutes.setAttribute(
+                    'transform',
+                    `translate(0,0) rotate(${minute})`);
+                this.seconds.setAttribute(
+                    'transform',
+                    `translate(0,0) rotate(${second})`);
+            }
+
+            polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+                let angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;
+
+                return {
+                    x: centerX + (radius * Math.cos(angleInRadians)),
+                    y: centerY + (radius * Math.sin(angleInRadians))
+                };
+            }
+
+            largeArcFlag() {
+                return (S, V, E) => Math.abs(angle(S, V, E)) > pi / 2 ? 0 : 1;
+            }
+            sweepFlag() {
+                return (S, V, E) => angle(E, S, V) > 0 ? 0 : 1;
+            }
+        }
+
+        let clock = new Clock(new Date());
+
+        const svg = document.querySelector('#clock');
+
+        svg.addEventListener('click', (evt) => {
+            pauseBegin = clock.minute * (360 / 60);
+            pauseEnd = ((clock.minute + 15) * (360 / 60));
+            // console.log(minute, (minute + 15))
+        })
+
+        setInterval(() => {
+
+            clock.update();
+            clock.setDigitalValue();
+            clock.setAnalogValue();
+
+
+            setSegment();
+        }, 100);
+
+        function setSegment() {
+            let cx = 0,
+                cy = 0,
+                r = 300;
+            let coords1 = clock.polarToCartesian(cx, cy, r, pauseBegin);
+            let coords2 = clock.polarToCartesian(cx, cy, r, pauseEnd);
+            let x1 = coords1.x;
+            let y1 = coords1.y;
+            let x2 = coords2.x;
+            let y2 = coords2.y;
+            let rotation = 0;
+
+            // let d = `M ${x1} ${y1} A ${r} ${r} ${rotation} ${sweep} ${largeArc} ${x2} ${y2} L ${cx} ${cy} L ${x1} ${y1} Z`;
+            let d = `M ${x1} ${y1} L ${x2} ${y2} L ${cx} ${cy} L ${x1} ${y1} Z`;
+            let segment = document.querySelector('#segment');
+            segment.setAttribute('d', d);
+        }
+    </script>
+    <!-- - - - - - - - - - - -->
+</body>
+
+</html>

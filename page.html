@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/assets/css/style.css">
+</head>
+
+<body class="theme background" onload="document.querySelector('#role-prename').focus();">
+    <!-- Main navigation for keyboard access -->
+    <a accesskey="0" class="sr-only sr-only-focusable" tabindex="1" href="#main"><dfn>1.</dfn> zum Inhalt</a>
+    <a accesskey="1" class="sr-only sr-only-focusable" tabindex="1" href="#accessibility"><dfn>2.</dfn> Hilfen
+        zur
+        Barrierefreiheit</a>
+    <a accesskey="2" class="sr-only sr-only-focusable" tabindex="1" href="#navigation"><dfn>3.</dfn> zur
+        Navigation</a>
+    <a accesskey="4" class="sr-only sr-only-focusable" tabindex="1" href="#form-role"><dfn>4.</dfn> zur
+        Anmeldung als
+        Benutzer</a>
+    <a accesskey="5" class="sr-only sr-only-focusable" tabindex="1" href="#search"><dfn>5.</dfn> Suche</a>
+    <a accesskey="6" class="sr-only sr-only-focusable" tabindex="1" href="#main-news"><dfn>6.</dfn> Neues</a>
+    <a accesskey="7" class="sr-only sr-only-focusable" tabindex="1" href="#main-events"><dfn>7.</dfn>
+        Veranstaltungen</a>
+    <!-- /Main navigation for keyboard access -->
+
+    <!-- Semantic vs. non semantic -->
+
+
+    <!-- SEMANTIC -->
+    <div class="page-header primary glass elevated">
+        <header>
+            <h2 id="logo">The Shou Company</h2>
+            <form id="search">
+                <label for="search-input">Search</label>
+                <input type="search" name="search" id="search-input">
+                <button type="submit">search</button>
+            </form>
+
+            <nav>
+                <h6 aria-hidden="true" class="description-only">semantic navigation</h2>
+                    <h4 id="main_navigation" class="sr-only" aria-label="main navigation">main navigation
+                    </h4>
+                    <ul role="presentation" aria-labelledby="main_navigation">
+                        <li><a href="">Link zur Seite 1</a></li>
+                        <li><a href="">Link zur Seite 2</a></li>
+                        <li><a href="">Link zur Seite 3</a></li>
+                    </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="page-content content">
+        <main>
+            <section id="teaser">
+                <h1>Page Heading</h1>
+                <p>Teasertext ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellat fuga
+                    repellendus.</p>
+            </section>
+
+            <section id="main-news">
+                <article>
+                    <h3>News Article One Heading</h3>
+                    <p>News Article content ipsum dolor sit amet</p>
+                </article>
+                <article>
+                    <h3>News Article Two Heading</h3>
+                    <p>News Article content ipsum dolor sit amet</p>
+                </article>
+            </section>
+
+            <section id="main-events">
+                <article>
+                    <h3>Event Article One Heading</h3>
+                    <p>Event Article content ipsum dolor sit amet</p>
+                </article>
+                <article>
+                    <h3>Event Article Two Heading</h3>
+                    <p>Event Article content ipsum dolor sit amet</p>
+                </article>
+            </section>
+        </main>
+
+        <aside>
+            <form id="form-login" aria-live="assertive">
+                <fieldset>
+                    <legend>
+                        <dfn class="sr-only">Formular:</dfn>
+                        Melde dich hier mit deiner Rolle an:
+                    </legend>
+
+                    <span class="input-group group-as-row">
+                        <label for="role-prename">Vorname:</label>
+                        <input type="text" name="" value="Mickey" id="role-prename" required
+                            autocomplete="off"
+                            oninvalid="this.setCustomValidity('Vorname stimmt nicht oder fehlt ...')">
+
+                        <button for="role-prename" data-container="body" data-toggle="popover"
+                            data-placement="top"
+                            data-content="Prename lacus vel augue laoreet rutrum faucibus.">?</button>
+
+                        <p for="role-prename" class="sr-only">Der Vorname muss wenigstens 3 Zeichen haben.</p>
+                    </span>
+
+                    <span class="input-group">
+
+                        <label for="role-surname">Nachname:</label>
+                        <input type="text" name="" value="Mouse" id="role-surname" required
+                            autocomplete="off">
+                        <button for="role-surname" data-container="body" data-toggle="popover"
+                            data-placement="top"
+                            data-content="Surname lacus vel augue laoreet rutrum faucibus.">?</button>
+                    </span>
+
+                    <span class="input-group"> <label for="role-select-role">Verfügbare Rollen:</label>
+                        <select name="" id="role-select-role">
+                            <option>Bitte auswählen:</option>
+                            <optgroup label="Administratoren">
+                                <option value="" lang="en">Superuser</option>
+                                <option value="" lang="en">Hardware Hero</option>
+                            </optgroup>
+                            <optgroup label="Benutzer">
+                                <option value="">Redakteur</option>
+                                <option value="">Lektor</option>
+                            </optgroup>
+                        </select>
+                        <button for="role-select-role" data-container="body" data-toggle="popover"
+                            data-placement="top"
+                            data-content="Selectbox lacus vel augue laoreet rutrum faucibus.">?</button>
+                    </span>
+
+                    <button type="submit">
+                        Abschicken
+                    </button>
+
+                </fieldset>
+
+            </form>
+        </aside>
+    </div>
+
+    <div class="page-footer content">
+        <footer>
+            <h6 aria-hidden="true" class="description-only">semantic footer</h2>
+                <h6 id="page-footer-label" aria-hidden="true">Page Footer</h6>
+        </footer>
+    </div>
+    <!-- /Semantic vs. non semantic -->
+
+    <main id="main">
+        <h1>Headline</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium natus qui fugit fuga
+            consequuntur quisquam quidem ipsam repellendus.</p>
+        <nav>
+            <span class="sr-only">
+                <h4>navigation headline</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </span>
+
+            <ul>
+                <li><a href="">Link zur Seite 1</a></li>
+                <li><a href="">Link zur Seite 2</a></li>
+                <li><a href="">Link zur Seite 3</a></li>
+                <li aria-haspopup="tree">
+                    submenu
+                    <ul>
+                        <li aria-active descendant=""><a href="">Link zur Seite 4</a></li>
+                        <li><a href="">Link zur Seite 5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div aria-live="assertive">
+            <p>die Daten stehen zur Verfügung</p>
+        </div>
+    </main>
+
+
+    <!-- NON SEMANTIC -->
+    <div role="banner">non semantic page header</div>
+    <div role="navigation">non semantic navigation
+        <span role="navigation">
+            <span role="listitem"><a href=""></a></span>
+            <span role="listitem"><a href=""></a></span>
+            <span role="listitem"><a href=""></a></span>
+        </span>
+    </div>
+    <div role="complementary">non semantic aside content</div>
+    <div id="page-main" role="main">non semantic main content
+        <div role="heading" aria-level="2">Non Semantic Heading Content</div>
+    </div>
+    <div id="page-footer" role="contentinfo" aria-label="page-footer" aria-labelledby="page-footer-label">
+        non
+        semantic page footer</div>
+
+    <style>
+        .popover {
+            display: block;
+            position: absolute;
+
+            background-color: orange;
+        }
+
+        .popover:focus {
+            background-color: green;
+        }
+    </style>
+
+    <script>
+        let obj = document.querySelector('#popover');
+        if (obj) obj.remove();
+
+        let objs = document
+            .querySelectorAll('[data-toggle=popover]');
+
+        objs.forEach(el => el.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            let
+                context = event.target.parentNode,
+                text = event.target.dataset.content,
+                element = document.createElement('div');
+
+            element.setAttribute('id', 'popover');
+            element.setAttribute('tabindex', '1');
+            element.classList.add('popover');
+            element.classList.add('elevated');
+
+            element.innerHTML = `<p>${text}</p>`;
+
+            context.appendChild(element);
+
+            document.querySelector('#popover').focus();
+            // document.querySelector(`#${context}`).focus();
+        }));
+    </script>
+
+</body>
+
+</html>
